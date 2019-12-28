@@ -25,7 +25,7 @@ $(function () {
         for (let i = 0; i < tripsOnWebsite.length; i++) {
             const tripOnWebsite = tripsOnWebsite[i];
             const html = $(`
-<div class="trip_div" data-id="${tripOnWebsite.id}">
+<div class="trip_div">
         <h2>${tripOnWebsite.placeTo}</h2>
         <h2>${tripOnWebsite.placeFrom}</h2>
         <h2>${tripOnWebsite.date}</h2>
