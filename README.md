@@ -3,9 +3,9 @@
 Website and admin panel for company owner.
 
 
-Website allowes people to book a transport or join any trip that's listed.
+Website allows people to book a transport or join any trip that's listed.
 
-Admin panel allowes a company owner/employee to: 
+Admin panel allows a company owner/employee to: 
 - store all the bookings data that come from the website form.
 - list any transport from the data base on the website by clicking one button and providing a price,
 so other people could join this specific transport.
