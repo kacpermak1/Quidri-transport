@@ -1,7 +1,7 @@
 $(function () {
 
-    var url = "https://my-json-server.typicode.com/kacpermak1/quidri/trips";
-    var urlOnWebsite = "https://my-json-server.typicode.com/kacpermak1/quidri/tripsOnWebsite";
+    var url = "https://my-json-server.typicode.com/kacpermak1/Quidri-transport/trips";
+    var urlOnWebsite = "https://my-json-server.typicode.com/kacpermak1/Quidri-transport/tripsOnWebsite";
     const tripsList = $('.trips_list');
 
     loadTrips();

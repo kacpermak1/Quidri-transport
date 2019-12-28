@@ -1,6 +1,6 @@
 $(function () {
 
-    var url = "https://my-json-server.typicode.com/kacpermak1/quidri";
+    var url = "https://my-json-server.typicode.com/kacpermak1/Quidri-transport";
 
     const form = $('form')
 

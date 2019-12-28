@@ -1,6 +1,6 @@
 $(function () {
 
-    var url = "https://my-json-server.typicode.com/kacpermak1/quidri/tripsOnWebsite";
+    var url = "https://my-json-server.typicode.com/kacpermak1/Quidri-transport/tripsOnWebsite";
 
     const formWebsite = $('.form_add');
     const websitePlaceFrom = formWebsite.find('#website_place_from');

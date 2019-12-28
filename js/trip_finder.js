@@ -3,8 +3,8 @@ $(function () {
     const trips = $('.trips');
     const tripsInfo = $('.trip_info');
 
-    var url = "https://my-json-server.typicode.com/kacpermak1/quidri/tripsOnWebsite";
-    var urlo = "https://my-json-server.typicode.com/kacpermak1/quidri";
+    var url = "https://my-json-server.typicode.com/kacpermak1/Quidri-transport/tripsOnWebsite";
+    var urlo = "https://my-json-server.typicode.com/kacpermak1/Quidri-transport";
     const form = $('form')
 
    tripsInfo.slideDown();
