@@ -3,22 +3,22 @@ $(function () {
     const trips = $('.trips');
     const tripsInfo = $('.trip_info');
 
-    var url = "https://my-json-server.typicode.com/kacpermak1/Quidri-transport/tripsOnWebsite";
-    var urlo = "https://my-json-server.typicode.com/kacpermak1/Quidri-transport";
-    const form = $('form')
+    tripsInfo.slideDown();
 
-   tripsInfo.slideDown();
+    getData();
 
-    loadTripsOnWebsite();
+    function getData() {
 
-    function loadTripsOnWebsite() {
-        $.ajax({
-            url: url,
-        }).done(function (resp) {
-            insertTripsOnWebsite(resp);
-        }).fail(function (err) {
-        });
-    }
+        firebase.database().ref('tripsOnWebsite').once('value', function (snapshot) {
+
+            if (snapshot.val()) {
+                const response = Object.values(snapshot.val());
+                insertTripsOnWebsite(response);
+            } else {
+                trips.empty();
+            }
+        })
+    };
 
     function insertTripsOnWebsite(tripsOnWebsite) {
         trips.empty();
@@ -58,7 +58,7 @@ $(function () {
 
     trips.on('click', '.trip_div', function () {
         const exactDiv = $(this);
-        
+
         exactDiv.next().slideToggle()
     })
 
@@ -117,13 +117,10 @@ $(function () {
             phoneNumber: phoneNumber,
             price: price
         };
-        $.ajax({
-            url: urlo + "/trips",
-            method: "POST",
-            dataType: "json",
-            data: trips,
-        }).done(function (resp) {
-            console.log(resp);
-        })
+
+        const newTrip = firebase.database().ref('trips');
+        const newTripPush = newTrip.push();
+        newTripPush.set(trips);
+
     }
 })

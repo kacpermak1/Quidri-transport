@@ -1,7 +1,5 @@
 $(function () {
 
-    var url = "https://my-json-server.typicode.com/kacpermak1/Quidri-transport/tripsOnWebsite";
-
     const formWebsite = $('.form_add');
     const websitePlaceFrom = formWebsite.find('#website_place_from');
     const websitePlaceTo = formWebsite.find('#website_place_to');
@@ -12,28 +10,31 @@ $(function () {
 
     loadTripsOnWebsite();
 
-    function loadTripsOnWebsite() {
-        $.ajax({
-            url: url,
-        }).done(function (resp) {
-            console.log(resp);
-            insertTripsOnWebsite(resp);
-        }).fail(function (err) {
-            console.error(err);
-        });
-    }
+    function loadTripsOnWebsite(){
+
+        firebase.database().ref('tripsOnWebsite').once('value', function (snapshot) {
+
+            if (snapshot.val()) {
+                const response = Object.values(snapshot.val());
+                let id = Object.keys(snapshot.val());
+                insertTripsOnWebsite(response, id);
+            } else {
+                listOnWebsite.empty();
+            }
+        })
+    };
 
     listOnWebsite.on('click', '.remove_from_website', function () {
         const id = $(this).parent().data('id');
         removeTripFromWebsite(id);
     });
 
-    function insertTripsOnWebsite(tripsOnWebsite) {
+    function insertTripsOnWebsite(tripsOnWebsite, id) {
         listOnWebsite.empty();
         for (let i = 0; i < tripsOnWebsite.length; i++) {
             const tripOnWebsite = tripsOnWebsite[i];
             const html = $(`
-            <div data-id="${tripOnWebsite.id}">
+            <div data-id="${id[i]}">
             <h2>${tripOnWebsite.placeTo}</h2>
             <h2>${tripOnWebsite.placeFrom}</h2>
             <h2>${tripOnWebsite.date}</h2>
@@ -47,16 +48,9 @@ $(function () {
     }
 
     function removeTripFromWebsite(id) {
-        $.ajax({
-            url: url + '/' + id,
-            method: 'DELETE',
-        }).done(function (resp) {
-            console.log(resp);
-        }).fail(function (err) {
-            console.error(err);
-        }).always(function () {
+        firebase.database().ref('tripsOnWebsite').child(id).remove(function(){
             loadTripsOnWebsite();
-        })
+        });
     }
 
     formWebsite.on('submit', function (e) {
@@ -78,17 +72,12 @@ $(function () {
             startTime: startTime,
             price: price
         };
-        $.ajax({
-            url: url,
-            method: "POST",
-            dataType: "json",
-            data: tripsOnWebsite,
-        }).done(function (resp) {
-            console.log(resp);
-        }).always(function () {
+        const newTrip = firebase.database().ref('tripsOnWebsite');
+        const newTripPush = newTrip.push();
+        newTripPush.set(tripsOnWebsite)
             loadTripsOnWebsite();
-        });
-    }
+        }
+    
 
     listOnWebsite.on('click', '.edit_info_website', function () {
         const btn = $(this)
@@ -96,7 +85,7 @@ $(function () {
         const id = li.data('id');
         li.toggleClass('editable');
         if (li.hasClass('editable')) {
-            // pierwsze klikniecie
+            // first click
             const toTrip = li.find('h2').eq(0);
             const fromTrip = li.find('h2').eq(1);
             const dateTrip = li.find('h2').eq(2);
@@ -113,9 +102,8 @@ $(function () {
             timeTrip.replaceWith(`<input class="time" value="${timeVal}" />`);
             priceTrip.replaceWith(`<input class="price" value="${priceVal}" />`);
             btn.text('Gotowe');
-            //console.log(titleVal, descVal);
         } else {
-            // drugie klikniecie
+            // second click
             const inputFrom = li.find('.from');
             const inputTo = li.find('.to');
             const inputDate = li.find('.date');
@@ -145,14 +133,7 @@ $(function () {
             startTime: startTime,
             price: price
         };
-        $.ajax({
-            url: url +'/'+id,
-            method: 'PUT',
-            data: tripsOnWebsite,
-        }).done(function(resp) {
-            console.log(resp);
-        }).fail(function(err) {
-            console.error(err);
-        });
-    }
+
+        firebase.database().ref('tripsOnWebsite').child(id).set(tripsOnWebsite)};
+
 })

@@ -1,21 +1,8 @@
 $(function () {
 
-    var url = "https://my-json-server.typicode.com/kacpermak1/Quidri-transport/trips";
-    var urlOnWebsite = "https://my-json-server.typicode.com/kacpermak1/Quidri-transport/tripsOnWebsite";
     const tripsList = $('.trips_list');
 
     loadTrips();
-
-    function loadTrips() {
-        $.ajax({
-            url: url,
-        }).done(function (resp) {
-            console.log(resp);
-            insertTrips(resp);
-        }).fail(function (err) {
-            console.error(err);
-        });
-    }
 
     tripsList.on('click', '.admin_delete_button', function () {
         const id = $(this).parent().data('id');
@@ -23,6 +10,33 @@ $(function () {
         if (ask === "tak") { removeTrip(id) } else { alert('Nie usunięto rezerwacji') }
 
     });
+
+    function removeTrip(id) {
+
+        firebase.database().ref('trips').child(id).remove(function () {
+            loadTrips();
+        });
+
+    }
+
+    function loadTrips() {
+
+        firebase.database().ref('trips').once('value', function (snapshot) {
+
+            if (snapshot.val()) {
+
+                const response = Object.values(snapshot.val());
+                let id = Object.keys(snapshot.val());
+                let bookingNo = id.map(function (e) { return e.substring(1, 7) })
+
+                insertTrips(response, bookingNo, id);
+            } else {
+                alert('NO DATA');
+                tripsList.empty();
+                ;
+            }
+        });
+    }
 
     tripsList.on('click', '.admin_add_button', function () {
         const idTrip = $(this).parent().data('id');
@@ -41,13 +55,13 @@ $(function () {
 
     });
 
-    function insertTrips(trips) {
+    function insertTrips(trips, bookingNo, id) {
         tripsList.empty();
         for (let i = 0; i < trips.length; i++) {
             const trip = trips[i];
             const html = $(`
-            <div data-id="${trip.id}">
-            <h1>Rezerwacja nr.: <span>${trip.id}</span></h1>
+            <div data-id="${id[i]}">
+            <h1>Rezerwacja nr.: <span>${bookingNo[i]}</span></h1>
             <h2>Wyjazd z: <span>${trip.placeFrom}</span></h2>
             <h2>Do: <span>${trip.placeTo}</span></h2>
             <h2>Data wyjazdu: <span>${trip.date}</span></h2>
@@ -68,19 +82,6 @@ $(function () {
         }
     }
 
-    function removeTrip(id) {
-        $.ajax({
-            url: url + '/' + id,
-            method: 'DELETE',
-        }).done(function (resp) {
-            console.log(resp);
-        }).fail(function (err) {
-            console.error(err);
-        }).always(function () {
-            loadTrips();
-        })
-    }
-
     function addTripOnWebsite(placeTo, placeFrom, date, startTime, price) {
         const tripsOnWebsite = {
             date: date,
@@ -89,16 +90,10 @@ $(function () {
             startTime: startTime,
             price: price
         };
-        $.ajax({
-            url: urlOnWebsite,
-            method: "POST",
-            dataType: "json",
-            data: tripsOnWebsite,
-        }).done(function (resp) {
-            console.log(resp);
-        }).always(function () {
-            loadTrips();
-        });
+
+        const newTrip = firebase.database().ref('tripsOnWebsite');
+        const newTripPush = newTrip.push();
+        newTripPush.set(tripsOnWebsite);
     }
 
     tripsList.on('click', '.admin_edit_button', function () {
@@ -107,14 +102,14 @@ $(function () {
         const id = li.data('id');
         li.toggleClass('editable');
         if (li.hasClass('editable')) {
-            // pierwsze klikniecie
+            // first click
 
             const addInfo = li.find('p').find('span');
             const addInfoVal = addInfo.text();
             addInfo.replaceWith(`<input class="info_edit" value="${addInfoVal}" />`);
             btn.text('Zatwierdź');
         } else {
-            // drugie klikniecie
+            // second click
 
             const tripFrom = $(this).parent().find('h2').eq(0).find('span').text();
             const tripTo = $(this).parent().find('h2').eq(1).find('span').text();
@@ -152,15 +147,8 @@ $(function () {
             phoneNumber: phoneNumber,
             price: price
         };
-        $.ajax({
-            url: url + '/' + id,
-            method: 'PUT',
-            data: trips,
-        }).done(function (resp) {
-            console.log(resp);
-        }).fail(function (err) {
-            console.error(err);
-        });
-    }
+
+        firebase.database().ref('trips').child(id).set(trips)
+    };
 
 })

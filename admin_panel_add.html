@@ -24,7 +24,7 @@
     <h2 class="admin_h2">Dodaj przejazd na stronę główną</h2>
     <section class="add_to_website">
         <form class="main_form form_add" method="POST">
-            <div>
+            <div class="parent">
                 <div>
                     <label>Miejsce Odbioru</label>
                     <input type="text" name="place_from" placeholder="Miejsce Odbioru" id="website_place_from" />
@@ -57,6 +57,20 @@
     </div>
     <section class="list_on_website">
     </section>
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase.js"></script>
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyBXDU9FakFkZDkCgRnsUWQKWM5UMuZ0lT0",
+            authDomain: "quidri-ef135.firebaseapp.com",
+            databaseURL: "https://quidri-ef135.firebaseio.com",
+            projectId: "quidri-ef135",
+            storageBucket: "quidri-ef135.appspot.com",
+            messagingSenderId: "617250786537",
+            appId: "1:617250786537:web:9ca47decd99abff7ab3478",
+            measurementId: "G-CP6DH8PRF0"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="js/admin_add.js"></script>

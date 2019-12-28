@@ -61,7 +61,7 @@ $(function () {
         renault.addClass("hidden");
     })
 
-    $('.text').slideDown(2000)
+    $('.text').slideDown(1000)
 
 })
 

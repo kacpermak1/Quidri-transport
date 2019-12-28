@@ -4,12 +4,16 @@
   height: 300px;
   form {
     height: 300px;
-    position: relative;
-    padding-bottom: 60px;
-    #website_submit {
-      position: absolute;
-      bottom: -80px;
-      left: 240px;
+    padding-bottom: 80px;
+    margin-bottom:0;
+    .parent {
+      height:260px;
+      position: relative;
+      #website_submit {
+        position: absolute;
+        bottom: -90px;
+        left: 240px;
+      }
     }
   }
 }
@@ -20,14 +24,14 @@
   font-size: 26px;
   background-color: rgba(0, 0, 0, 0.6);
   padding: 8px;
-  margin: 15px;
+  margin: 40px;
 }
 
 .admin_mid_section {
   width: 100%;
   max-width: 1500px;
   height: 180px;
-  margin-top: 60px;
+  margin-top: 120px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,11 +39,12 @@
   font-family: $base-font;
   div {
     width: 800px;
-    height: 80px;
+    height: 120px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    margin:40px;
     h2 {
       margin: 0 2.5rem 0 2.5rem;
       &:nth-of-type(5) {
@@ -53,7 +58,7 @@
   width: 100%;
   max-width: 1500px;
   height: 100%;
-  min-height:500px;
+  min-height: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -67,36 +72,35 @@
     align-items: center;
     justify-content: center;
     background-color: $primary-color;
-    border-radius:50px;
+    border-radius: 50px;
     margin-bottom: 20px;
     h2 {
       margin: 0 2.5rem 0 2.5rem;
       color: white;
-      width:18%;
+      width: 18%;
       text-align: center;
     }
-    input{
-        width:12%;
-        height:22px;
+    input {
+      width: 12%;
+      height: 22px;
     }
-    button{
-        margin:10px;
-        width:60px;
-        height:30px;
-        border-radius: 50px;
-        font-family: $base-font;
-        font-size:12px;
-        background-color: rgb(92, 182, 205);
-        color:white;
-        &:hover{
-            cursor: pointer;
-            background-color: rgb(226, 120, 48);
-        }
-
+    button {
+      margin: 10px;
+      width: 60px;
+      height: 30px;
+      border-radius: 50px;
+      font-family: $base-font;
+      font-size: 12px;
+      background-color: rgb(92, 182, 205);
+      color: white;
+      &:hover {
+        cursor: pointer;
+        background-color: rgb(226, 120, 48);
+      }
     }
   }
 }
 
-.nonvisible{
-    visibility: hidden;
+.nonvisible {
+  visibility: hidden;
 }

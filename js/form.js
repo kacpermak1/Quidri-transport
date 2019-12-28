@@ -1,7 +1,5 @@
 $(function () {
 
-    var url = "https://my-json-server.typicode.com/kacpermak1/Quidri-transport";
-
     const form = $('form')
 
     const formName = form.find('#name');
@@ -13,7 +11,6 @@ $(function () {
     const formNumberOfPeople = form.find('#number_of_people');
     const formEmail = form.find('#email');
     const formAdditionalInfo = form.find('#add_info');
-    const formSubmit = form.find('#submit');
     const formNumberOfSuitcases = form.find('#number_of_suitcases');
     const formPhoneNumber = form.find('#telephone');
     const price = "brak";
@@ -67,15 +64,9 @@ $(function () {
             phoneNumber: phoneNumber,
             price: price
         };
-        $.ajax({
-            url: url + "/trips",
-            method: "POST",
-            dataType: "json",
-            data: trips,
-        }).done(function (resp) {
-            console.log(resp);
-        })
-    }
-
+        
+        const newTrip = firebase.database().ref('trips');
+        const newTripPush = newTrip.push();
+        newTripPush.set(trips)}
 
 })
