@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/2cc63405f7.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Quidri Admin</title>
+</head>
+
+<body class="form">
+    <header class="admin_head">
+        <a href="admin_panel.html" class="page-logo"></a>
+        <ul class="page-nav-list">
+            <li><a>ADMIN PANEL:</a></li>
+            <li><a href="admin_panel.html">REZERWACJE</a></li>
+            <li><a href="admin_panel_add.html">DODAJ/USUŃ PRZEJAZDY</a></li>
+        </ul>
+    </header>
+    <img class="form_img" src="./assets/highway.jpg" />
+    <h2 class="admin_h2">Dodaj przejazd na stronę główną</h2>
+    <section class="add_to_website">
+        <form class="main_form form_add" method="POST">
+            <div>
+                <div>
+                    <label>Miejsce Odbioru</label>
+                    <input type="text" name="place_from" placeholder="Miejsce Odbioru" id="website_place_from" />
+                    <label>Data Wyjazdu</label>
+                    <input type="date" name="date" id="website_trip_date" />
+                    <label class="nonvisible">Hidden</label>
+                    <input class="nonvisible" />
+                </div>
+                <div>
+                    <label>Miejsce Docelowe</label>
+                    <input type="text" name="destination" placeholder="Miejsce Docelowe" id="website_place_to" />
+                    <label>Czas Wyjazdu</label>
+                    <input type="text" name="time" placeholder="Podaj godzinę wyjazdu" id="website_start_time" />
+                    <label>Cena</label>
+                    <input type="text" name="price" placeholder="Podaj cenę" id="price" />
+                </div>
+                <input type="submit" class="submit" value="Dodaj" id="website_submit">
+            </div>
+        </form>
+    </section>
+    <div class="admin_mid_section">
+        <h2 class="admin_h2">Usuń lub edytuj przejazd ze strony internetowej</h2>
+        <div>
+            <h2>Kierunek</h2>
+            <h2>Wyjazd z</h2>
+            <h2>Data wyjazdu</h2>
+            <h2>Godzina Wyjazdu</h2>
+            <h2>Cena</h2>
+        </div>
+    </div>
+    <section class="list_on_website">
+    </section>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="js/admin_add.js"></script>
+
+</html>

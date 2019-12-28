@@ -1,0 +1,42 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hidden {
+  display: none;
+}
+
+@mixin button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+  background-color: $primary-color;
+  border: 1px solid white;
+  font-family: $base-font;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  z-index: 1000;
+  text-decoration: none;
+}
+
+@mixin text_carousele {
+  position: absolute;
+  max-width: 1500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}

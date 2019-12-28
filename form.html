@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/2cc63405f7.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <title>Quidri Transport Oxfordshire - Form</title>
+</head>
+
+<body class="form_main">
+    <header>
+        <a href="index.html" class="page-logo"></a>
+        <ul class="page-nav-list">
+            <li><a href="trip_finder.html">Szukaj Przejazdu</a></li>
+            <li><a href="form.html">Zamów Przejazd</a></li>
+            <li><a href="#">O nas</a></li>
+            <li><a href="#">Cennik</a></li>
+            <li><a href="#">Kontakt</a></li>
+        </ul>
+    </header>
+    <img class="form_img" src="./assets/highway.jpg" />
+    <div class="head_form">
+        <h1>Formularz rezerwacji</h1>
+        <h3>Wypełnij poniższy formularz a my skontaktujemy się z tobą w celu potwierdzenia twojego wyjazdu!</h3>
+    </div>
+    <form class="main_form" style="display:none" method="POST">
+        <div>
+            <div>
+                <label>Miejsce Odbioru</label>
+                <input type="text" name="place_from" placeholder="Miejsce Odbioru" id="place_from" />
+
+                <label>Data Wyjazdu</label>
+                <input type="date" name="date" id="trip_date" />
+
+                <label>Liczba Osób</label>
+                <input type="number" name="passangers_number" placeholder="Podaj liczbę osób" id="number_of_people" />
+
+                <label>Imię</label>
+                <input type="text" name="name" placeholder="Podaj imię" id="name" />
+
+                <label>Email</label>
+                <input type="email" name="email" placeholder="Podaj email" id="email" />
+            </div>
+            <div>
+                <label>Miejsce Docelowe</label>
+                <input type="text" name="destination" placeholder="Miejsce Docelowe" id="place_to" />
+
+                <label>Czas Wyjazdu</label>
+                <input type="text" name="time" placeholder="Podaj godzinę wyjazdu" id="start_time" />
+
+                <label>Ilość Bagażu</label>
+                <input type="number" name="baggage_number" placeholder="Podaj liczbę walizek"
+                    id="number_of_suitcases" />
+
+                <label>Nazwisko</label>
+                <input type="text" name="surname" placeholder="Podaj nazwisko" id="surname" />
+
+                <label>Telefon</label>
+                <input type="text" name="phone" placeholder="Podaj numer kontaktowy" id="telephone" />
+            </div>
+            <textarea name="info" id="add_info" cols="30" rows="10" placeholder="Informacje dodatkowe"></textarea>
+            <input type="submit" class="submit" value="Zarezerwuj" id="submit">
+        </div>
+
+    </form>
+    <div class="modal_popup" style="display: none">
+        <h2>Dziękujemy za dokonanie wstępnej rezerwacji.</h2>
+        <h3>Wkrótce skontaktujemy się z tobą w celu potwierdzenia.</h3>
+        <a href="index.html">Powrót na stronę główną</a>
+    </div>
+    <div class="navbar_footer">
+            <div>
+                <img src="assets/logo2.png">
+                <h3>Oxfordshire</h3>
+                <h3>Tel.: 07400 394 206</h3>
+                <h3>email: quidri@gmail.com</h3>
+            </div>
+            <div>
+                <h2>Nasze Usługi</h2>
+                <h3>Przejazdy na lotniska</h3>
+                <h3>Wynajem samochodu/ busa</h3>
+                <h3>Wesela/ koncerty/ wydarzenia</h3>
+            </div>
+            <div>
+                <h2>O nas</h2>
+                <h3>FAQs</h3>
+                <h3>Cennik</h3>
+                <h3>Kontakt</h3>
+            </div>
+            <div>
+                <h2>Zarezerwuj</h2>
+                <h3>Rezerwacja</h3>
+                <h3>Zapytaj o cenę</h3>
+                <h3>Dołącz do przejazdu</h3>
+            </div>
+        </div>
+        <footer>
+            <h3>birmingham</h3>
+            <h3>Heathrow</h3>
+            <h3>London Luton</h3>
+            <h3>East Midlands</h3>
+            <h3>London Stansted</h3>
+        </footer>
+</body>
+<script src="js/form.js"></script>
+
+</html>
