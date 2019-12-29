@@ -35,19 +35,19 @@ $(function () {
     <form class="trip_finder_form" style="display:none" method="POST">
         <div>    
             <label>Imię</label>
-            <input type="text" name="name" placeholder="Podaj imię" id="name" />            
+            <input type="text" name="name" placeholder="Podaj imię" class="name" />            
             <label>Liczba Osób</label>
-            <input type="number" name="passangers_number" placeholder="Podaj liczbę osób" id="number_of_people" />
+            <input type="number" name="passangers_number" placeholder="Podaj liczbę osób" class="number_of_people" />
             <label>Email</label>
-            <input type="email" name="email" placeholder="Podaj email" id="email" />        
+            <input type="email" name="email" placeholder="Podaj email" class="email" />        
         </div>
         <div>
             <label>Nazwisko</label>
-            <input type="text" name="surname" placeholder="Podaj nazwisko" id="surname" />
+            <input type="text" name="surname" placeholder="Podaj nazwisko" class="surname" />
             <label>Ilość Bagażu</label>
-            <input type="number" name="baggage_number" placeholder="Podaj liczbę walizek" id="number_of_suitcases" />
+            <input type="number" name="baggage_number" placeholder="Podaj liczbę walizek" class="number_of_suitcases" />
             <label>Telefon</label>
-            <input type="text" name="phone" placeholder="Podaj numer kontaktowy" id="telephone" />
+            <input type="text" name="phone" placeholder="Podaj numer kontaktowy" class="telephone" />
         </div>
         <input type="submit" class="submit" value="Dołącz" id="submit_form">
     </div>
@@ -74,12 +74,12 @@ $(function () {
         const time = thisForm.prev().find('h2').eq(3).text();
         const price = thisForm.prev().find('h2').eq(4).text();
         const formAdditionalInfo = "Prośba o dołączenie!";
-        let formName = thisForm.find('#name');
-        let formSurname = thisForm.find('#surname');
-        let formNumberOfPeople = thisForm.find('#number_of_people');
-        let formEmail = thisForm.find('#email');
-        let formNumberOfSuitcases = thisForm.find('#number_of_suitcases');
-        let formPhoneNumber = thisForm.find('#telephone');
+        let formName = thisForm.find('.name');
+        let formSurname = thisForm.find('.surname');
+        let formNumberOfPeople = thisForm.find('.number_of_people');
+        let formEmail = thisForm.find('.email');
+        let formNumberOfSuitcases = thisForm.find('.number_of_suitcases');
+        let formPhoneNumber = thisForm.find('.telephone');
 
         const errors = [];
 
