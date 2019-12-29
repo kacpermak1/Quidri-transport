@@ -24,7 +24,8 @@ so other people could join this specific transport.
 
 also:
 - Gulp
-- Json server
+- Firebase
+- Json server (initially)
 
 ## Preview:
 Check the preview of the <b>WEBSITE</b> here: *https://kacpermak1.github.io/Quidri-transport/*
