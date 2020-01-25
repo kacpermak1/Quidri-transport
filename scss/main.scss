@@ -1,7 +1,8 @@
-@import 'base';
 @import 'reset';
 @import 'fonts';
 @import 'colors';
+@import 'mobile/mobile';
+@import 'base';
 @import 'header';
 @import 'carousel';
 @import 'fleet-section';
@@ -12,4 +13,4 @@
 @import 'trip_finder/trip_finder';
 @import 'admin/admin';
 @import 'admin/admin_add';
-@import 'mobile/mobile'
+

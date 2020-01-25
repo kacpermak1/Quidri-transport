@@ -63,6 +63,18 @@ $(function () {
 
     $('.text').slideDown(1000)
 
+    $('.hamburger_icon').on('click',function(){
+        $('.page-nav-list').toggleClass('toggle_menu');
+    })
+
+    const navList = $('.page-nav-list').children();
+    
+    for (let i=0; i<navList.length; i++){
+        navList.on('click',function(){
+            $('.page-nav-list').toggleClass('toggle_menu');
+        })
+    }
+
 })
 
 

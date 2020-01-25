@@ -123,4 +123,10 @@ $(function () {
         newTripPush.set(trips);
 
     }
+
+
+    $('.hamburger_icon').on('click',function(){
+        $('.page-nav-list').toggleClass('toggle_menu');
+    })
+
 })
