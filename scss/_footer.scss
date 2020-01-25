@@ -1,8 +1,7 @@
 .navbar_footer {
   width: 100%;
   height: 280px;
-  max-width: 1500px;
-  background-color: #393e46;
+  background-color: #EDEDED;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -25,40 +24,37 @@
       margin: 0.5rem 0 1rem 0.5rem;
     }
     h3 {
-      color: #cacfd8;
+      color: #054752;
       font-family: $base-font;
       font-weight: 400;
       font-size: 1rem;
       margin: 0.6rem;
     }
     h2 {
-      color: white;
+      color:#054752;
       font-family: $base-font;
       font-weight: 700;
-      font-size: 22px;
+      font-size: 1.4rem;
       margin-bottom: 2rem;
       padding: 5px;
-      margin-top: 15px;
+      margin-top: 0.9rem;
     }
   }
 }
 
 footer {
   width: 100%;
-  max-width: 1500px;
   height: 60px;
-  background-color: #1d1d1f;
+  background-color: #DDD;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   h3 {
     color: #737981;
     font-family: $base-font;
     font-weight: 400;
-    font-size: 15px;
-    margin-right: 3.5rem;
-    margin-left: 3.5em;
+    font-size: 0.9rem;
     text-transform: uppercase;
   }
 }

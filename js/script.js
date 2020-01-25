@@ -7,12 +7,12 @@ $(function () {
         margin: 10,
         autoplay: true,
         autoplayTimeout: 8000,
-        autoplayHoverPause: true,
         animateIn: 'fadeIn',
         animateOut: 'fadeOut',
         autoplayHoverPause: false,
-        autoHeight: true,
+        autoHeight: false,
         center: true,
+        dots: false
     });
 
     //Cars

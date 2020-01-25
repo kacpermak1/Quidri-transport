@@ -1,13 +1,18 @@
 .add_to_website {
-  width: 1500px;
-  max-width: 1500px;
   height: 300px;
-  form {
-    height: 300px;
-    padding-bottom: 80px;
-    margin-bottom:0;
+  margin: 0 auto;
+  .form_add {
+    width: 100%;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: $base-font;
+    padding-bottom: 200px;
+    margin-bottom: 5rem;
     .parent {
-      height:260px;
+      height: 260px;
       position: relative;
       #website_submit {
         position: absolute;
@@ -17,46 +22,50 @@
     }
   }
 }
+
 .admin_h2 {
-  color: white;
+  color: $alt-text;
   font-family: $base-font;
   font-weight: 700;
-  font-size: 26px;
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 8px;
-  margin: 40px;
+  font-size: 1.6rem;
+  width:100%;
+  padding-bottom: 2rem;
+  border-bottom:1px solid $alt-text;
+  text-align: center;
+  &:first-of-type{
+    margin-top:2rem;
+  }
 }
 
 .admin_mid_section {
   width: 100%;
-  max-width: 1500px;
   height: 180px;
-  margin-top: 120px;
+  margin-top: 9rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-family: $base-font;
   div {
-    width: 800px;
-    height: 120px;
+    width: 66vw;
+    height: 80px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin:40px;
+    font-family: $base-font;
+    margin: 40px;
+    padding-right: 10%;
     h2 {
-      margin: 0 2.5rem 0 2.5rem;
-      &:nth-of-type(5) {
-        margin-right: 100px;
-      }
+      color: $alt-text;
+      text-align: center;
+      width: 16.6%;
     }
   }
 }
 
 .list_on_website {
   width: 100%;
-  max-width: 1500px;
   height: 100%;
   min-height: 500px;
   display: flex;
@@ -64,25 +73,34 @@
   align-items: center;
   justify-content: flex-start;
   font-family: $base-font;
+  margin: 0 auto;
   div {
-    width: 1000px;
+    width: 66vw;
     height: 80px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background-color: $primary-color;
+    font-family: $base-font;
+    border: 1px solid $alt-text;
+    background-color: #80bcf585;
+    border-radius: 5px;
+    margin: 30px 0 10px 0;
     border-radius: 50px;
-    margin-bottom: 20px;
     h2 {
-      margin: 0 2.5rem 0 2.5rem;
-      color: white;
+      color: $alt-text;
       width: 18%;
       text-align: center;
     }
     input {
-      width: 12%;
-      height: 22px;
+      background-color: white;
+      border: 1px solid $alt-text;
+      width: 16.6%;
+      height: 2rem;
+      text-align: center;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      color: $alt-text;
     }
     button {
       margin: 10px;
@@ -90,12 +108,12 @@
       height: 30px;
       border-radius: 50px;
       font-family: $base-font;
-      font-size: 12px;
-      background-color: rgb(92, 182, 205);
+      font-size: 0.75rem;
+      background-color:$primary-color;
       color: white;
       &:hover {
         cursor: pointer;
-        background-color: rgb(226, 120, 48);
+        background-color: rgb(0, 153, 255);
       }
     }
   }

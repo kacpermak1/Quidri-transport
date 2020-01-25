@@ -1,19 +1,17 @@
 .main_form {
   width: 100%;
-  max-width: 1500px;
   height: 480px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-family: $base-font;
-  background-color: rgba(255, 196, 0, 0.85);
   padding-bottom: 200px;
-  margin-bottom: 160px;
+  margin-bottom: 5rem;
   label {
     margin-bottom: 0.6rem;
     color: #1d1d1f;
-    font-weight: 600;
+    font-weight: 400;
   }
   .submit {
     @include button;
@@ -42,7 +40,9 @@
       height: 130px;
       min-height: 130px;
       max-height: 130px;
-      border: 2px solid #3e4444;
+      border: 1px solid #3e4444c5;
+        border-radius: 5px;
+      resize: none;
     }
     div {
       width: 50%;
@@ -55,7 +55,8 @@
         width: 300px;
         height: 30px;
         margin-bottom: 1.4rem;
-        border: 2px solid #3e4444;
+        border: 1px solid #3e4444c5;
+        border-radius: 5px;
       }
     }
   }
@@ -63,7 +64,8 @@
 .form_img {
   width: 100%;
   height: 270px;
-  max-width: 1500px;
+  margin:0 auto;
+  opacity:0.8;
 }
 
 .head_form {
@@ -74,19 +76,17 @@
   align-items: center;
   justify-content: center;
   font-family: $base-font;
-  margin-bottom: 2rem;
   h1 {
-    color: white;
+    color: $alt-text;
     font-weight: 700;
-    font-size: 26px;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 8px;
-    margin-top: 20px;
+    font-size: 1.6rem;
+    padding: 0.5rem;
+    margin-top: 1.25rem;
     margin-bottom: 1rem;
   }
   h3 {
-    color: black;
-    padding: 8px;
+    color:$alt-light-text;
+    padding: 0.5rem;
     font-size: 1rem;
   }
 }
@@ -104,12 +104,12 @@
     z-index: 1200;
     font-family: $base-font;
     h2{
-        font-size: 32px;
+        font-size: 2rem;
         margin-bottom:30px;
     }
     h3{
-        font-size: 18px;
-        margin-bottom:30px;
+        font-size: 1.1rem;
+        margin-bottom:1.9rem;
     }
     a{
         width: 300px;
@@ -124,5 +124,3 @@
         
     }
 }
-
-// rgba(196, 196, 196, 0.911);

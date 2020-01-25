@@ -1,13 +1,12 @@
 .benefits {
   width: 100%;
-  max-width: 1500px;
-  height: 640px;
+  height: 590px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   margin-bottom:1rem ;
-//   background-color: #fa3c4c;
+  margin:0 auto;
   .benefits_head {
     width: 100%;
     height: 120px;
@@ -16,10 +15,10 @@
     align-items: flex-end;
     flex-direction: row;
     h2 {
-      color: black;
+      color: $alt-text;
       font-family: $base-font;
       font-weight: 700;
-      font-size: 26px;
+      font-size: 1.6rem;
       margin-bottom: 6px;
       text-transform: uppercase;
       word-spacing: 3px;
@@ -36,52 +35,46 @@
     }
   }
   .benefits_info {
-    width: 74%;
+    width: 82%;
     height: 520px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     div {
       width: 30%;
       height: 90%;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
       margin:1rem;
       img {
-        width: 260px;
-        height: 260px;
+        width: 220px;
+        height: 220px;
         &:hover{
-            animation-name: circles;
-            animation-duration: 4s;
             cursor:pointer;
         }
       }
       h2 {
-        color: white;
         font-family: $base-font;
+        text-align: center;
         font-weight: 700;
-        font-size: 22px;
-        margin-bottom: 2rem;
-        background-color: rgba(0, 0, 0, 0.6);
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+        color: $alt-text;
         padding: 5px;
-        margin-top: 15px;
       }
       p{
           width:90%;
+          text-align: center;
           height: 30%;
           font-family: $base-font;
           font-size: 1.1rem;
           line-height: 20px;
+          color:rgb(112, 140, 145);
       }
     }
   }
 }
-
-@keyframes circles {
-    from {}
-    to { transform: rotate(-360deg);}
-  }
 

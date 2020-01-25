@@ -15,8 +15,6 @@ $(function () {
     const formPhoneNumber = form.find('#telephone');
     const price = "brak";
 
-    form.slideDown();
-
     form.on('submit', function (e) {
         e.preventDefault();
 

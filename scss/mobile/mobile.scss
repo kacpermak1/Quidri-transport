@@ -1,0 +1,39 @@
+$mobile-width: 790px;
+$tablet-width: 1140px;
+$desktop: 1080px;
+
+@mixin mobile {
+  @media (max-width: $mobile-width) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$mobile-width + 1px}) and (max-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin landscape {
+  @media screen and ( min-width: 641px ) and (max-width: 1100px) and ( max-height: 600px ){
+    @content;
+  }
+}
+
+@include mobile {
+  html {
+    font-size: 70%;
+  }
+}
+
+@include tablet {
+  html {
+    font-size: 80%;
+  }
+}
+
+@include landscape{
+  html{
+    font-size:65%;
+  }
+}

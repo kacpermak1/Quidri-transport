@@ -1,74 +1,77 @@
 .first_info {
   width: 100%;
-  max-width: 1500px;
-  height: 200px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 50px 0 30px 0;
+  margin-top:1rem;
   font-family: $base-font;
+  margin:0 auto;
   h1 {
-    color: white;
+    color: $alt-text;
     font-weight: 700;
-    font-size: 26px;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 8px;
+    font-size: 1.6rem;
+    padding: 0.5rem;
     margin: 30px 0 30px 0;
   }
   h2 {
-    color: black;
+    color: $alt-light-text;
     margin:4px;
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   div {
-    width: 660px;
+    width: 56vw;
     height: 80px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     font-family: $base-font;
-    margin: 50px 0 10px 0;
+    margin-top:4rem;
     h2 {
-      color: #1d1d1f;
+      color: $alt-text;
+      text-align: center;
+      width:20%;
     }
   }
 }
 
 .trip_finder_section {
   width: 100%;
-  max-width: 1500px;
   height: 100%;
   min-height:500px;
   display: flex;
   flex-direction: column;
+  margin:0 auto;
   .trips {
     width: 100%;
-    max-width: 1500px;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    margin:0 auto;
     .trip_div {
-      width: 840px;
+      width: 56vw;
       height: 80px;
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: center;
       font-family: $base-font;
-      background-color: $primary-color;
+      border: 1px solid $alt-text;
+      background-color: #80bcf585;
+      border-radius: 5px;
       margin: 30px 0 10px 0;
       border-radius: 50px;
       &:hover {
         cursor: pointer;
-        background-color: #44bec7;
       }
       h2 {
-        margin: 0 3rem 0 3em;
-        color: #e9e5e5;
+        width:20%;
+        text-align: center;
+        color:  $alt-text;
         &:nth-of-type(3){
             white-space: nowrap;
         }
@@ -84,8 +87,8 @@
         align-items: center;
         justify-content: center;
         font-family: $base-font;
-        border: 2px solid rgba(0, 0, 0, 0.6);
-        border-radius: 50px;
+        border: 1px solid rgba(0, 0, 0, 0.6);
+        border-radius: 30px;
         div{
             display: flex;
             flex-direction: column;
@@ -97,7 +100,7 @@
             width:220px;
             height:24px;
             margin-bottom:12px;
-            border: 2px solid rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(0, 0, 0, 0.6);
         }
         label{
             margin-bottom:5px;
@@ -106,7 +109,7 @@
         #submit_form{
             @include button;
             margin:0;
-            font-size:16px;
+            font-size:1rem;
             margin-left:50px;
             &:hover{
                 cursor: pointer;

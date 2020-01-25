@@ -1,26 +1,35 @@
 .carousel {
   width: 100%;
-  max-width: 1500px;
+  height:84vh;
   margin-top: 0;
   position: relative;
-  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  div.owl-dots {
+    position: absolute;
+    width:200px;
+    left:50%;
+  }
   .button {
     @include button;
-    position: absolute;
-    left: 43.2%;
-    bottom: 5%;
+    position:absolute;
+    left:calc(50%-100px);
+    bottom:2rem;
   }
   .owl-carousel {
     .item {
       width: 100%;
+      height:84vh;
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
-      position: relative;
       .text {
         @include text_carousele;
-        top: 50%;
-        width: 100%;
+        top: 46%;
+        width:100%;
+        min-width: 100%;
         height: 170px;
         max-height: 170px;
         div {
@@ -32,15 +41,12 @@
           flex-direction: row;
           align-items: center;
           justify-content: center;
-          align-items: center;
           h2 {
             color: white;
             font-family: $base-font;
             font-weight: 700;
-            font-size: 2.3rem;
-            margin: 1rem;
-            padding: 8px 20px 8px 20px;
-            background-color: rgba(255, 255, 255, 0.4);
+            font-size: 2.8rem;
+            margin:0.8rem;
           }
         }
         h3 {
@@ -48,8 +54,7 @@
           font-family: $base-font;
           font-weight: 700;
           font-size: 26px;
-          margin-bottom: 2rem;
-          background-color: rgba(0, 0, 0, 0.6);
+          margin-bottom: 1rem;
           padding: 5px;
         }
       }
@@ -64,30 +69,28 @@
           width: 420px;
           height: 180px;
           color: white;
-          background-color: #44bec77e;
           padding: 16px;
           border-radius: 4px;
           font-family: $base-font;
           font-weight: 600;
-          font-size: 32px;
+          font-size: 2rem;
           line-height: 40px;
           margin-bottom: 2rem;
         }
       }
       .text_third {
         @include text_carousele;
-        right: 10%;
-        top: 34%;
+        right: 8%;
+        top: 45%;
         width: 310px;
         height: 400px;
         max-height: 400px;
         h2 {
-          color: white;
+          color: rgb(255, 255, 255);
           font-family: $base-font;
           font-weight: 700;
           font-size: 32px;
           margin-bottom: 2rem;
-          background-color: rgba(0, 0, 0, 0.6);
           padding: 5px;
           margin-top: 15px;
         }
@@ -95,19 +98,19 @@
           width: 90%;
           height: 56%;
           color: white;
-          background-color: #fa3c4c7e;
           padding: 16px;
           border-radius: 4px;
           font-family: $base-font;
           font-weight: 600;
-          font-size: 28px;
-          line-height: 36px;
+          font-size: 1.75rem;
           margin-bottom: 2rem;
         }
       }
       img {
-        max-height: 700px;
+        // max-height: 700px;
+        max-height:100%;
         max-width: 100%;
+        height:100%;
         top: 0%;
         left: 0%;
       }
@@ -115,8 +118,4 @@
   }
 }
 
-div.owl-dots {
-  position: absolute;
-  bottom: 10px;
-  right: 47.2%;
-}
+
