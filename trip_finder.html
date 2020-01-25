@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script type="text/javascript"> (function() { const css = document.createElement('link'); css.href = 'https://use.fontawesome.com/releases/v5.1.0/css/all.css'; css.rel = 'stylesheet'; css.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(css); })(); </script>
+    <script
+        type="text/javascript"> (function () { const css = document.createElement('link'); css.href = 'https://use.fontawesome.com/releases/v5.1.0/css/all.css'; css.rel = 'stylesheet'; css.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(css); })(); </script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <title>Quidri Transport Oxfordshire - Join an existing trip</title>
 </head>
+
 <body class="form_main">
     <header>
         <a href="index.html" class="page-logo"></a>
@@ -27,6 +29,14 @@
         <h1>Kliknij na przejazd, do którego chcesz dołączyć</h1>
         <h2>Po kliknięciu wybranego przejazdu pojawi się krótki formularz.</h2>
         <h2>Aby dołączyć, wypełnij go i kliknij 'Dołącz'!</h2>
+        <div class="input_wrapper">
+            <input type="text" placeholder="Place to" id="filter_input">
+            <img class="search_icon" src="./assets/search.png" />
+        </div>
+        <div class="input_wrapper">
+            <input type="text" placeholder="Place from" id="filter_from_input">
+            <img class="search_icon" src="./assets/search.png" />
+        </div>
         <div class="trip_info" style="display:none">
             <h2>Kierunek</h2>
             <h2>Wyjazd Z:</h2>

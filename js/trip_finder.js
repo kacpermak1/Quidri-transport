@@ -26,8 +26,8 @@ $(function () {
             const tripOnWebsite = tripsOnWebsite[i];
             const html = $(`
 <div class="trip_div">
-        <h2>${tripOnWebsite.placeTo}</h2>
-        <h2>${tripOnWebsite.placeFrom}</h2>
+        <h2 id="placeTo">${tripOnWebsite.placeTo}</h2>
+        <h2 id="placeFrom">${tripOnWebsite.placeFrom}</h2>
         <h2>${tripOnWebsite.date}</h2>
         <h2>${tripOnWebsite.startTime}</h2>
         <h2>${tripOnWebsite.price}</h2>
@@ -125,8 +125,55 @@ $(function () {
     }
 
 
-    $('.hamburger_icon').on('click',function(){
+    $('.hamburger_icon').on('click', function () {
         $('.page-nav-list').toggleClass('toggle_menu');
     })
 
+    $('#filter_input').on('keyup', function () {
+        filterTo();
+    })
+
+    function filterTo() {
+        let filterValue, input, divSection, tripDivs, i;
+
+        input = $('#filter_input');
+        filterValue = input.val().toUpperCase();
+        divSection = $('.trips');
+        tripDivs = divSection.find('div.trip_div');
+        const eachDivValue = tripDivs.find('#placeTo');
+
+        for (i = 0; i < eachDivValue.length; i++) {
+             const a = eachDivValue[i];
+    
+            if (a.innerHTML.toUpperCase().indexOf(filterValue) > -1) {
+                eachDivValue[i].parentElement.style.display ="";
+            } else {
+                eachDivValue[i].parentElement.style.display ="none";
+            }
+        }
+    }
+
+    $('#filter_from_input').on('keyup', function () {
+        filterFrom();
+    })
+
+    function filterFrom(){
+        let filterValue, input, divSection, tripDivs, i;
+
+        input = $('#filter_from_input');
+        filterValue = input.val().toUpperCase();
+        divSection = $('.trips');
+        tripDivs = divSection.find('div.trip_div');
+        const eachDivValue = tripDivs.find('#placeFrom');
+
+        for (i = 0; i < eachDivValue.length; i++) {
+             const a = eachDivValue[i];
+    
+            if (a.innerHTML.toUpperCase().indexOf(filterValue) > -1) {
+                eachDivValue[i].parentElement.style.display ="";
+            } else {
+                eachDivValue[i].parentElement.style.display ="none";
+            }
+        }
+    }
 })
