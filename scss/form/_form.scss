@@ -94,8 +94,8 @@
 .modal_popup{
     width:100%;
     height:100%;
-    max-width:1500px;
     position: fixed;
+    top:0;
     background-color: aliceblue;
     display: flex;
     flex-direction: column;
