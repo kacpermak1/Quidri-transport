@@ -66,7 +66,7 @@ $(function () {
             <h2>Do: <span>${trip.placeTo}</span></h2>
             <h2>Data wyjazdu: <span>${trip.date}</span></h2>
             <h2>Godzina Wyjazdu: <span>${trip.startTime}</span></h2>
-            <h2>Imię Nazwisko: <span class="name">${trip.name}</span> <span class="surname">${trip.surname}</span></h2>
+            <h2>Imię Nazwisko: <span class="surname">${trip.surname}</span><span class="name">${trip.name}</span></h2>
             <h2>Liczba osób: <span>${trip.numOfPeople}</span></h2>
             <h2>Liczba walizek: <span>${trip.suitcases}</span></h2>
             <h2>email: <span>${trip.email}</span></h2>
