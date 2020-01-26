@@ -29,10 +29,11 @@
     display: flex;
     .mobile_button{
         @include button;
-        width:160px;
-        height:42px;
+        width:220px;
+        height:62px;
         position: absolute;
-        bottom:1.6rem;
+        bottom:4rem;
+        font-size: 1.4rem;
     }
   }
 }
