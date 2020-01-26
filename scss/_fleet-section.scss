@@ -9,6 +9,9 @@
   position: relative;
   padding-top: 1rem;
   margin-top: 1rem;
+  @include mobile{
+    display:none
+    }
   div {
     width: 580px;
     height: 90%;

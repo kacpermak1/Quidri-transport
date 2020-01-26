@@ -1,37 +1,41 @@
 .carousel {
   width: 100%;
-  height:84vh;
+  height: 64vh;
+  max-height: 64vh;
   margin-top: 0;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom:11rem;
+  @include mobile{
+    display:none;
+  }
   div.owl-dots {
     position: absolute;
-    width:200px;
-    left:50%;
+    width: 200px;
+    left: 50%;
   }
   .button {
     @include button;
-    position:absolute;
-    left:calc(50%-100px);
-    bottom:1rem;
+    position: absolute;
+    left: calc(50%-100px);
+    bottom: -9rem;
   }
   .owl-carousel {
     .item {
-      width: 100%;
-      height:84vh;
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center;
+      padding-bottom: 56.25%;
+      height: 0;
+      position: relative;
       .text {
         @include text_carousele;
-        top: 46%;
-        width:100%;
+        top: 56%;
+        width: 100%;
         min-width: 100%;
         height: 170px;
         max-height: 170px;
+        z-index: 200;
         div {
           width: 100%;
           max-width: 1500px;
@@ -46,7 +50,7 @@
             font-family: $base-font;
             font-weight: 700;
             font-size: 2.8rem;
-            margin:0.8rem;
+            margin: 0.8rem;
           }
         }
         h3 {
@@ -61,10 +65,11 @@
       .text_second {
         @include text_carousele;
         left: 10%;
-        top: 22%;
+        top: 32%;
         width: 20%;
         height: 400px;
         max-height: 400px;
+        z-index: 200;
         p {
           width: 420px;
           height: 180px;
@@ -85,6 +90,7 @@
         width: 310px;
         height: 400px;
         max-height: 400px;
+        z-index: 200;
         h2 {
           color: rgb(255, 255, 255);
           font-family: $base-font;
@@ -107,15 +113,12 @@
         }
       }
       img {
-        // max-height: 700px;
-        max-height:100%;
-        max-width: 100%;
-        height:100%;
+        width: 100%;
+        height: 100%;
+        position: absolute;
         top: 0%;
         left: 0%;
       }
     }
   }
 }
-
-
