@@ -8,12 +8,19 @@
   margin-top:1rem;
   font-family: $base-font;
   margin:0 auto;
+  @include mobile{
+    height:40vh;
+  }
   h1 {
     color: $alt-text;
     font-weight: 700;
     font-size: 1.6rem;
     padding: 0.5rem;
     margin: 30px 0 30px 0;
+    @include mobile{
+      text-align: center;
+      margin: 0.7rem 0 1.8rem 0;
+    }
   }
   h2 {
     color: $alt-light-text;
@@ -25,6 +32,9 @@
     height:2.7rem;
     margin-top:1.4rem;
     position: relative;
+    @include mobile{
+      width:60%;
+    }
   input{
     width:100%;
     height:100%;
@@ -57,6 +67,11 @@
     justify-content: center;
     font-family: $base-font;
     margin-top:1.4rem;
+    @include mobile{
+      width:96%;
+      margin-top:0;
+      height:60px;
+    }
     h2 {
       color: $alt-text;
       text-align: center;
@@ -72,6 +87,9 @@
   display: flex;
   flex-direction: column;
   margin:0 auto;
+  @include mobile{
+    min-height: 60vh;
+  }
   .trips {
     width: 100%;
     height: 100%;
@@ -93,6 +111,12 @@
       border-radius: 5px;
       margin: 30px 0 10px 0;
       border-radius: 50px;
+      @include mobile{
+        width:96%;
+        border-radius: 0;
+        background-color: transparent;
+        margin: 10px 0 0 0;
+      }
       &:hover {
         cursor: pointer;
       }
@@ -117,18 +141,31 @@
         font-family: $base-font;
         border: 1px solid rgba(0, 0, 0, 0.6);
         border-radius: 30px;
+        @include mobile{
+          width:96%;
+          height:260px;
+          border-radius: 0;
+          position: relative;
+          align-items: flex-start;
+        }
         div{
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             margin:10px;
+            @include mobile{
+              width:50%;
+            }
         }
         input{
             width:220px;
             height:24px;
             margin-bottom:12px;
             border: 1px solid rgba(0, 0, 0, 0.6);
+            @include mobile{
+              width:96%;
+            }
         }
         label{
             margin-bottom:5px;
@@ -139,6 +176,11 @@
             margin:0;
             font-size:1rem;
             margin-left:50px;
+            @include mobile{
+              margin-left:0;
+              position: absolute;
+              bottom:1.2rem;
+            }
             &:hover{
                 cursor: pointer;
             }
