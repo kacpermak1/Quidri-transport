@@ -168,10 +168,10 @@
         font-family: $base-font;
         border: none;
         position: relative;
-        @media screen and (min-width:1251px){
+        @media screen and (min-width:1361px){
           justify-content: flex-start;
         }
-        @media screen and (max-width:1250px){
+        @media screen and (max-width:1360px){
           width:96%;
           height:260px;
           border-radius: 0;
@@ -222,14 +222,14 @@
             margin:0;
             font-size:1rem;
             bottom:5.5rem;
-            @media screen and (max-width:1250px){
+            @media screen and (max-width:1360px){
               margin-left:0;
               position: absolute;
               bottom:0.6rem;
               font-size: 1.45rem;
               background-color:$primary-color;
             }
-            @media screen and (min-width:1251px){
+            @media screen and (min-width:1361px){
               right:0;
             }
             &:hover{

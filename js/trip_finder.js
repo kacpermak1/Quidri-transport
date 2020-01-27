@@ -60,6 +60,7 @@ $(function () {
         const exactDiv = $(this);
 
         exactDiv.next().slideToggle()
+
         if(exactDiv.css('background-color') === "rgba(128, 188, 245, 0.52)"){
             exactDiv.css('background-color','rgba(128, 245, 196, 0.52)')
         }else{exactDiv.css('background-color','rgba(128, 188, 245, 0.52)')}
