@@ -25,7 +25,7 @@ $(function () {
         for (let i = 0; i < tripsOnWebsite.length; i++) {
             const tripOnWebsite = tripsOnWebsite[i];
             const html = $(`
-<div class="trip_div">
+<div class="trip_div form_inactive">
         <h2 id="placeTo">${tripOnWebsite.placeTo}</h2>
         <h2 id="placeFrom">${tripOnWebsite.placeFrom}</h2>
         <h2>${tripOnWebsite.date}</h2>
@@ -61,9 +61,13 @@ $(function () {
 
         exactDiv.next().slideToggle()
 
-        if(exactDiv.css('background-color') === "rgba(128, 188, 245, 0.52)"){
-            exactDiv.css('background-color','rgba(128, 245, 196, 0.52)')
-        }else{exactDiv.css('background-color','rgba(128, 188, 245, 0.52)')}
+        if (exactDiv.hasClass('form_inactive')) {
+            exactDiv.removeClass('form_inactive');
+            exactDiv.addClass('form_active');
+        } else {
+            exactDiv.removeClass('form_active');
+            exactDiv.addClass('form_inactive');
+        }
     })
 
     // Joining the trip
@@ -185,21 +189,24 @@ $(function () {
         }
     }
 
-    function hideAllFormsOnKeyUp(){
+    function hideAllFormsOnKeyUp() {
         const trips = document.querySelector('.trips');
         const forms = trips.querySelectorAll('form');
 
-        for(let i=0; i<forms.length;i++){
+        for (let i = 0; i < forms.length; i++) {
             forms[i].style.display = "none"
         }
     }
 
-    function changeColorOfDivIfFormOpen(){
-        const trips = document.querySelector('.trips');
-        const allDivs = trips.querySelectorAll('.trip_div');
+    function changeColorOfDivIfFormOpen() {
+        const trips = $('.trips');
+        const allDivs = trips.find('.trip_div');
 
-        for(let i=0;i<allDivs.length;i++){
-            allDivs[i].style.backgroundColor = "rgba(128, 188, 245, 0.52)"
+        for (let i = 0; i < allDivs.length; i++) {
+            if (allDivs.hasClass('form_active')) {
+                allDivs.removeClass('form_active')
+                allDivs.addClass('form_inactive')
+            }
         }
     }
 })

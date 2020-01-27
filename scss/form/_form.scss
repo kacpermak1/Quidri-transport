@@ -56,6 +56,7 @@
     position: absolute;
     bottom: -200px;
     right: 50px;
+    font-size: 1.2rem;
     @include mobile {
       right: 1rem;
       font-size: 1.6rem;

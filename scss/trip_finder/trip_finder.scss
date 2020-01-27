@@ -130,7 +130,6 @@
       justify-content: center;
       font-family: $base-font;
       border: 1px solid $alt-text;
-      background-color: #80bcf585;
       border-radius: 5px;
       margin: 30px 0 10px 0;
       border-radius: 50px;
@@ -244,5 +243,11 @@
     display: flex;
 }
 
+.form_active{
+  background-color: rgba(128, 245, 196, 0.52);
+}
 
+.form_inactive{
+  background-color: #80bcf585;
+}
 
