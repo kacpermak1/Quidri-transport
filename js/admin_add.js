@@ -34,10 +34,10 @@ $(function () {
         for (let i = 0; i < tripsOnWebsite.length; i++) {
             const tripOnWebsite = tripsOnWebsite[i];
             const html = $(`
-            <div data-id="${id[i]}">
-            <h2>${tripOnWebsite.placeTo}</h2>
-            <h2>${tripOnWebsite.placeFrom}</h2>
-            <h2>${tripOnWebsite.date}</h2>
+            <div class="each_trip" data-id="${id[i]}">
+            <h2 class="place_to">${tripOnWebsite.placeTo}</h2>
+            <h2 class="place_from">${tripOnWebsite.placeFrom}</h2>
+            <h2 class="date_value">${tripOnWebsite.date}</h2>
             <h2>${tripOnWebsite.startTime}</h2>
             <h2>${tripOnWebsite.price}</h2>
             <button class="edit_info_website">Edytuj</button>
@@ -55,7 +55,7 @@ $(function () {
 
     formWebsite.on('submit', function (e) {
         e.preventDefault();
-        addTripOnWebsite(websitePlaceTo.val(), websitePlaceFrom.val(), websiteDate.val(), websiteStartTime.val(), websitePrice.val());
+        addTripOnWebsite(websitePlaceTo.val(), websitePlaceFrom.val(), websiteDate.val().split('-').reverse().join('-'), websiteStartTime.val(), websitePrice.val());
         websitePlaceTo.val('');
         websitePlaceFrom.val('');
         websiteDate.val('');
@@ -135,5 +135,79 @@ $(function () {
         };
 
         firebase.database().ref('tripsOnWebsite').child(id).set(tripsOnWebsite)};
+
+        $('.hamburger_icon').on('click',function(){
+            $('.page-nav-list').toggleClass('toggle_menu');
+        })
+
+        $('#filter_from_input').on('keyup',function(){
+            filterByPlaceFrom();
+        })
+        $('#filter_to_input').on('keyup',function(){
+            filterByPlaceTo();
+        })
+        $('#filter_by_date').on('keyup',function(){
+            filterByDate();
+        })
+
+        function filterByPlaceFrom() {
+            let filterValue, input, divSection, tripDivs, i;
+    
+            input = $('#filter_from_input');
+            filterValue = input.val().toUpperCase();
+            divSection = $('.list_on_website');
+            tripDivs = divSection.find('.each_trip');
+            const eachDivValue = tripDivs.find('.place_from');
+    
+            for (i = 0; i < eachDivValue.length; i++) {
+                const a = eachDivValue[i];
+    
+                if (a.innerHTML.toUpperCase().indexOf(filterValue) > -1) {
+                    eachDivValue[i].parentElement.style.display = "";
+                } else {
+                    eachDivValue[i].parentElement.style.display = "none";
+                }
+            }
+        }
+
+        function filterByPlaceTo() {
+            let filterValue, input, divSection, tripDivs, i;
+    
+            input = $('#filter_to_input');
+            filterValue = input.val().toUpperCase();
+            divSection = $('.list_on_website');
+            tripDivs = divSection.find('.each_trip');
+            const eachDivValue = tripDivs.find('.place_to');
+    
+            for (i = 0; i < eachDivValue.length; i++) {
+                const a = eachDivValue[i];
+    
+                if (a.innerHTML.toUpperCase().indexOf(filterValue) > -1) {
+                    eachDivValue[i].parentElement.style.display = "";
+                } else {
+                    eachDivValue[i].parentElement.style.display = "none";
+                }
+            }
+        }
+
+        function filterByDate() {
+            let filterValue, input, divSection, tripDivs, i;
+    
+            input = $('#filter_by_date');
+            filterValue = input.val().toUpperCase();
+            divSection = $('.list_on_website');
+            tripDivs = divSection.find('.each_trip');
+            const eachDivValue = tripDivs.find('.date_value');
+    
+            for (i = 0; i < eachDivValue.length; i++) {
+                const a = eachDivValue[i];
+    
+                if (a.innerHTML.toUpperCase().indexOf(filterValue) > -1) {
+                    eachDivValue[i].parentElement.style.display = "";
+                } else {
+                    eachDivValue[i].parentElement.style.display = "none";
+                }
+            }
+        }
 
 })

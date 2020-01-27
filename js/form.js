@@ -26,7 +26,7 @@ $(function () {
                     /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(formEmail.val()) !== true || formEmail.val() === "") { errors.push("Podaj poprawny adres email") } else if (
                     formNumberOfSuitcases.val() < 0 || formNumberOfSuitcases.val() === "") { errors.push("Podaj poprawną liczbę walizek") } else if (formPhoneNumber.val().length < 0 || formPhoneNumber.val() === "") { errors.push("Podaj poprawny numer telefonu") } else if (formDate.val() === "") { errors.push("Podaj datę wyjazdu") } else {
 
-                        addTrip(formName.val(), formSurname.val(), formDate.val(), formPlaceFrom.val(), formPlaceTo.val(), formStartTime.val(), formNumberOfPeople.val(), formEmail.val(), formAdditionalInfo.val(), formNumberOfSuitcases.val(), formPhoneNumber.val(), price);
+                        addTrip(formName.val(), formSurname.val(), formDate.val().split('-').reverse().join('-'), formPlaceFrom.val(), formPlaceTo.val(), formStartTime.val(), formNumberOfPeople.val(), formEmail.val(), formAdditionalInfo.val(), formNumberOfSuitcases.val(), formPhoneNumber.val(), price);
 
                         formName.val('');
                         formSurname.val('');
@@ -72,4 +72,6 @@ $(function () {
         $('.hamburger_icon').on('click',function(){
             $('.page-nav-list').toggleClass('toggle_menu');
         })
+
+        
 })

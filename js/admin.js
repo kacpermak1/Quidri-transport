@@ -61,15 +61,15 @@ $(function () {
             const trip = trips[i];
             const html = $(`
             <div data-id="${id[i]}">
-            <h1>Rezerwacja nr.: <span>${bookingNo[i]}</span></h1>
-            <h2>Wyjazd z: <span>${trip.placeFrom}</span></h2>
-            <h2>Do: <span>${trip.placeTo}</span></h2>
-            <h2>Data wyjazdu: <span>${trip.date}</span></h2>
+            <h1>Booking ID: <span class="id_span">${bookingNo[i].toUpperCase()}</span></h1>
+            <h2>Wyjazd z: <span class="place_from">${trip.placeFrom}</span></h2>
+            <h2>Do: <span class="place_to">${trip.placeTo}</span></h2>
+            <h2>Data wyjazdu: <span class="date_span">${trip.date}</span></h2>
             <h2>Godzina Wyjazdu: <span>${trip.startTime}</span></h2>
             <h2>Imię Nazwisko: <span class="surname">${trip.surname}</span><span class="name">${trip.name}</span></h2>
             <h2>Liczba osób: <span>${trip.numOfPeople}</span></h2>
             <h2>Liczba walizek: <span>${trip.suitcases}</span></h2>
-            <h2>email: <span>${trip.email}</span></h2>
+            <h2>email: <span class="email_span">${trip.email}</span></h2>
             <h2>Numer telefonu: <span>${trip.phoneNumber}</span></h2>
             <p>Dodatkowe informacje: <span>${trip.addInfo}</span></p>
             <button class="admin_add_button">Dodaj na stronę</button>
@@ -150,5 +150,150 @@ $(function () {
 
         firebase.database().ref('trips').child(id).set(trips)
     };
+
+    $('.hamburger_icon').on('click',function(){
+        $('.page-nav-list').toggleClass('toggle_menu');
+    })
+
+    $('#filter_from_input').on('keyup', function () {
+        filterByPlaceFrom();
+    })
+
+    $('#filter_to_input').on('keyup', function () {
+        filterByPlaceTo();
+    })
+
+    $('#filter_by_date').on('keyup', function () {
+        filterByDate();
+    })
+    $('#filter_by_id').on('keyup', function () {
+        filterById();
+    })
+    $('#filter_by_surname').on('keyup', function () {
+        filterBySurname();
+    })
+    $('#filter_by_email').on('keyup', function () {
+        filterByEmail();
+    })
+
+    function filterByPlaceFrom() {
+        let filterValue, input, divSection, tripDivs, i;
+
+        input = $('#filter_from_input');
+        filterValue = input.val().toUpperCase();
+        divSection = $('.trips_list');
+        tripDivs = divSection.find('div');
+        const eachDivValue = tripDivs.find('.place_from');
+
+        for (i = 0; i < eachDivValue.length; i++) {
+            const a = eachDivValue[i];
+
+            if (a.innerHTML.toUpperCase().indexOf(filterValue) > -1) {
+                eachDivValue[i].parentElement.parentElement.style.display = "";
+            } else {
+                eachDivValue[i].parentElement.parentElement.style.display = "none";
+            }
+        }
+    }
+
+    function filterByPlaceTo() {
+        let filterValue, input, divSection, tripDivs, i;
+
+        input = $('#filter_to_input');
+        filterValue = input.val().toUpperCase();
+        divSection = $('.trips_list');
+        tripDivs = divSection.find('div');
+        const eachDivValue = tripDivs.find('.place_to');
+
+        for (i = 0; i < eachDivValue.length; i++) {
+            const a = eachDivValue[i];
+
+            if (a.innerHTML.toUpperCase().indexOf(filterValue) > -1) {
+                eachDivValue[i].parentElement.parentElement.style.display = "";
+            } else {
+                eachDivValue[i].parentElement.parentElement.style.display = "none";
+            }
+        }
+    }
+
+    function filterByDate() {
+        let filterValue, input, divSection, tripDivs, i;
+
+        input = $('#filter_by_date');
+        filterValue = input.val().toUpperCase();
+        divSection = $('.trips_list');
+        tripDivs = divSection.find('div');
+        const eachDivValue = tripDivs.find('.date_span');
+
+        for (i = 0; i < eachDivValue.length; i++) {
+            const a = eachDivValue[i];
+
+            if (a.innerHTML.toUpperCase().indexOf(filterValue) > -1) {
+                eachDivValue[i].parentElement.parentElement.style.display = "";
+            } else {
+                eachDivValue[i].parentElement.parentElement.style.display = "none";
+            }
+        }
+    }
+
+    function filterById() {
+        let filterValue, input, divSection, tripDivs, i;
+
+        input = $('#filter_by_id');
+        filterValue = input.val().toUpperCase();
+        divSection = $('.trips_list');
+        tripDivs = divSection.find('div');
+        const eachDivValue = tripDivs.find('.id_span');
+
+        for (i = 0; i < eachDivValue.length; i++) {
+            const a = eachDivValue[i];
+
+            if (a.innerHTML.toUpperCase().indexOf(filterValue) > -1) {
+                eachDivValue[i].parentElement.parentElement.style.display = "";
+            } else {
+                eachDivValue[i].parentElement.parentElement.style.display = "none";
+            }
+        }
+    }
+
+    function filterBySurname() {
+        let filterValue, input, divSection, tripDivs, i;
+
+        input = $('#filter_by_surname');
+        filterValue = input.val().toUpperCase();
+        divSection = $('.trips_list');
+        tripDivs = divSection.find('div');
+        const eachDivValue = tripDivs.find('.surname');
+
+        for (i = 0; i < eachDivValue.length; i++) {
+            const a = eachDivValue[i];
+
+            if (a.innerHTML.toUpperCase().indexOf(filterValue) > -1) {
+                eachDivValue[i].parentElement.parentElement.style.display = "";
+            } else {
+                eachDivValue[i].parentElement.parentElement.style.display = "none";
+            }
+        }
+    }
+
+    function filterByEmail() {
+        let filterValue, input, divSection, tripDivs, i;
+
+        input = $('#filter_by_email');
+        filterValue = input.val().toUpperCase();
+        divSection = $('.trips_list');
+        tripDivs = divSection.find('div');
+        const eachDivValue = tripDivs.find('.email_span');
+
+        for (i = 0; i < eachDivValue.length; i++) {
+            const a = eachDivValue[i];
+
+            if (a.innerHTML.toUpperCase().indexOf(filterValue) > -1) {
+                eachDivValue[i].parentElement.parentElement.style.display = "";
+            } else {
+                eachDivValue[i].parentElement.parentElement.style.display = "none";
+            }
+        }
+    }
 
 })

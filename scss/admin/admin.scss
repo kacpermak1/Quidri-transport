@@ -1,3 +1,61 @@
+.admin_filter_section {
+  width: 100%;
+  height: 260px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  div {
+    width:20%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin:0.6rem;
+    .input_wrapper {
+      width: 100%;
+      height: 2.7rem;
+      margin-top: 1.4rem;
+      position: relative;
+      @include mobile {
+        width: 65%;
+        height: 3.4rem;
+      }
+      input {
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        color: rgb(5, 71, 82);
+        background-color: rgb(237, 237, 237);
+        box-shadow: none;
+        border-radius: 16px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgb(237, 237, 237);
+        padding-left: 2.6rem;
+        font-size: 1rem;
+        font-weight: 300;
+        @include mobile {
+          font-size: 1.4rem;
+        }
+      }
+      .search_icon {
+        width: 1.6rem;
+        height: 1.6rem;
+        position: absolute;
+        left: 5px;
+        bottom: 0.6rem;
+        @include mobile {
+          bottom: 0.8rem;
+          width: 1.9rem;
+          height: 1.9rem;
+        }
+      }
+    }
+  }
+}
+
 .trips_list {
   width: 100%;
   max-width: 1500px;
@@ -13,14 +71,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border:1px solid $alt-text;
+    border: 1px solid $alt-text;
     margin: 10px;
     font-family: $base-font;
     border-radius: 40px;
     &:hover {
       cursor: pointer;
-      }
-    
+    }
+
     h1 {
       font-size: 1.75rem;
       color: $alt-text;
@@ -31,35 +89,35 @@
       color: $alt-text;
       margin: 5px;
       font-size: 1rem;
-      width:90%;
-      span{
+      width: 90%;
+      span {
         float: right;
       }
-      &:last-of-type{
-          font-size:1.4rem;
-          span{
-              color:rgb(255, 115, 0);
-              font-size: 1.5rem;
-          }
+      &:last-of-type {
+        font-size: 1.4rem;
+        span {
+          color: rgb(255, 115, 0);
+          font-size: 1.5rem;
+        }
       }
     }
     span {
-        font-size: 1.2rem;
-        color: $alt-text;
+      font-size: 1.2rem;
+      color: $alt-text;
     }
-    .surname{
-      margin-left:6px;
+    .surname {
+      margin-left: 6px;
     }
     p {
       color: $alt-text;
       margin: 5px;
-      width:90%;
+      width: 90%;
       font-size: 1rem;
       max-width: 100%;
       height: 23%;
       max-height: 23%;
-      span{
-        float:right;
+      span {
+        float: right;
       }
     }
     .admin_add_button {
@@ -96,9 +154,9 @@
         color: $alt-text;
       }
     }
-    input{
-        width:320px;
-        height:30px;
+    input {
+      width: 320px;
+      height: 30px;
     }
   }
 }

@@ -19,6 +19,7 @@
             <li><a href="admin_panel.html">REZERWACJE</a></li>
             <li><a href="admin_panel_add.html">DODAJ/USUŃ PRZEJAZDY</a></li>
         </ul>
+        <i class="fas fa-bars hamburger_icon" aria-hidden="true"></i>
     </header>
     <img class="form_img" src="./assets/highway.jpg" />
     <h2 class="admin_h2">Dodaj przejazd na stronę główną</h2>
@@ -47,7 +48,21 @@
     </section>
     <div class="admin_mid_section">
         <h2 class="admin_h2">Usuń lub edytuj przejazd ze strony internetowej</h2>
-        <div>
+        <div class="admin_filters_wrapper">
+            <div class="input_wrapper">
+                <input type="text" placeholder="Place to" id="filter_to_input">
+                <img class="search_icon" src="./assets/search.png" />
+            </div>
+            <div class="input_wrapper">
+                <input type="text" placeholder="Place from" id="filter_from_input">
+                <img class="search_icon" src="./assets/search.png" />
+            </div>
+            <div class="input_wrapper">
+                <input type="text" placeholder="Date" id="filter_by_date">
+                <img class="search_icon" src="./assets/search.png" />
+            </div>
+        </div>
+        <div class="admin_add_trips_info">
             <h2>Kierunek</h2>
             <h2>Wyjazd z</h2>
             <h2>Data wyjazdu</h2>
