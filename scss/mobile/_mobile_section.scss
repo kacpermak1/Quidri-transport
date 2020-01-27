@@ -1,0 +1,19 @@
+.mobile_section{
+    display:none;
+    @include mobile{
+        width:100%;
+        height: 36vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        padding-bottom: 4.5rem;
+    }
+    a{
+        @include button;
+        margin:2rem 0 2rem 0;
+        font-size: 1.6rem;
+        width:60%;
+    }
+}

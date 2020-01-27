@@ -12,7 +12,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   @include mobile {
-    height:100vh;
+    height:90vh;
   }
   @include landscape{
     height:150vh;
