@@ -22,7 +22,10 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     @include mobile {
-      visibility: hidden;
+      background-image: url("../assets/logo2.png");
+      width:80px;
+      height:80%;
+      margin-left: 2rem;
     }
   }
   .hamburger_icon {
