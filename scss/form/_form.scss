@@ -16,6 +16,9 @@
     padding: 0.5rem;
     margin-top: 1.25rem;
     margin-bottom: 1rem;
+    @include mobile {
+     font-size:2rem;
+    }
   }
   h3 {
     color: $alt-light-text;
@@ -23,6 +26,7 @@
     font-size: 1rem;
     @include mobile {
       text-align: center;
+      font-size: 1.2rem;
     }
   }
 }
@@ -38,6 +42,7 @@
   margin-bottom: 5rem;
   @include mobile{
     justify-content: flex-start;
+    margin: auto;
   }
   label {
     margin-bottom: 0.6rem;
@@ -66,7 +71,7 @@
     align-items: center;
     position: relative;
     @include mobile {
-      width: 99%;
+      width: 100%;
       height: 410px;
     }
     textarea {
@@ -81,8 +86,8 @@
       border-radius: 5px;
       resize: none;
       @include mobile {
-        width: 99%;
-        border: 1px solid #acadadc5;
+        width: 92%;
+        left:12px;
       }
     }
     div {
@@ -92,6 +97,9 @@
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
+      @include mobile{
+        align-items: center;
+      }
       input {
         width: 300px;
         height: 30px;
@@ -99,9 +107,9 @@
         border: 1px solid #3e4444c5;
         border-radius: 5px;
         @include mobile {
-          width: 96%;
-          border-radius: 2px;
-          border: 1px solid #acadadc5;
+          width: 86%;
+          // border-radius: 2px;
+          // border: 1px solid #acadadc5;
         }
       }
     }
