@@ -86,6 +86,15 @@
       border: 1px solid #3e4444c5;
       border-radius: 5px;
       resize: none;
+      font-size: 1.2rem;
+      &::placeholder {
+        color: rgb(204, 204, 204);
+        font-size: 1rem;
+        padding-top: 2px;
+        @include mobile {
+          font-size: 1.2rem;
+        }
+      }
       @include mobile {
         width: 92%;
         left: 11px;
@@ -110,10 +119,13 @@
         border: 1px solid #3e4444c5;
         border-radius: 5px;
         font-size: 1.2rem;
-            &::placeholder{
-              color: rgb(204, 204, 204);
-              font-size: 0.8rem;
-            }
+        &::placeholder {
+          color: rgb(204, 204, 204);
+          font-size: 1rem;
+          @include mobile {
+            font-size: 1.2rem;
+          }
+        }
         @include mobile {
           width: 90%;
           margin-bottom: 1.6rem;

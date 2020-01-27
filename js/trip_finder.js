@@ -134,6 +134,8 @@ $(function () {
 
     $('#filter_input').on('keyup', function () {
         filterTo();
+        hideAllFormsOnKeyUp();
+        changeColorOfDivIfFormOpen();
     })
 
     function filterTo() {
@@ -158,6 +160,8 @@ $(function () {
 
     $('#filter_from_input').on('keyup', function () {
         filterFrom();
+        hideAllFormsOnKeyUp();
+        changeColorOfDivIfFormOpen();
     })
 
     function filterFrom() {
@@ -177,6 +181,24 @@ $(function () {
             } else {
                 eachDivValue[i].parentElement.style.display = "none";
             }
+        }
+    }
+
+    function hideAllFormsOnKeyUp(){
+        const trips = document.querySelector('.trips');
+        const forms = trips.querySelectorAll('form');
+
+        for(let i=0; i<forms.length;i++){
+            forms[i].style.display = "none"
+        }
+    }
+
+    function changeColorOfDivIfFormOpen(){
+        const trips = document.querySelector('.trips');
+        const allDivs = trips.querySelectorAll('.trip_div');
+
+        for(let i=0;i<allDivs.length;i++){
+            allDivs[i].style.backgroundColor = "rgba(128, 188, 245, 0.52)"
         }
     }
 })

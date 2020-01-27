@@ -190,6 +190,9 @@
             &::placeholder{
               color: rgba(5, 71, 82, 0.205);
               font-size: 0.8rem;
+              @include mobile{
+                font-size: 1.1rem;
+              }
             }
             @include mobile{
               width:100%;
