@@ -160,14 +160,14 @@
         align-items: center;
         justify-content: center;
         font-family: $base-font;
-        border: 1px solid rgba(0, 0, 0, 0.6);
-        border-radius: 30px;
+        border: none;
         @include mobile{
           width:96%;
           height:260px;
           border-radius: 0;
           position: relative;
           align-items: flex-start;
+          padding-top:1.2rem;
         }
         div{
             display: flex;
@@ -182,15 +182,22 @@
         input{
             width:220px;
             height:24px;
-            margin-bottom:12px;
-            border: 1px solid rgba(0, 0, 0, 0.6);
+            margin-bottom:4px;
+            border:none;
+            border-bottom: 1px solid $alt-light-text;
+            color: $alt-text;
+            font-size: 1.2rem;
+            &::placeholder{
+              color: rgba(5, 71, 82, 0.205);
+              font-size: 0.8rem;
+            }
             @include mobile{
               width:100%;
             }
         }
         label{
-            margin-bottom:5px;
-            color: rgba(0, 0, 0, 0.6);
+            margin-bottom:12px;
+            color: $alt-text;
             @include mobile{
               font-size:1.2rem;
             }

@@ -34,20 +34,20 @@ $(function () {
 </div>
     <form class="trip_finder_form" style="display:none" method="POST">
         <div>    
-            <label>Imię</label>
-            <input type="text" name="name" placeholder="Podaj imię" class="name" />            
-            <label>Liczba Osób</label>
+            <input type="text" name="name" placeholder="Podaj imię" class="name" />  
+            <label>Imię</label>          
             <input type="number" name="passangers_number" placeholder="Podaj liczbę osób" class="number_of_people" />
-            <label>Email</label>
-            <input type="email" name="email" placeholder="Podaj email" class="email" />        
+            <label>Liczba Osób</label>
+            <input type="email" name="email" placeholder="Podaj email" class="email" />    
+            <label>Email</label>    
         </div>
         <div>
-            <label>Nazwisko</label>
             <input type="text" name="surname" placeholder="Podaj nazwisko" class="surname" />
-            <label>Ilość Bagażu</label>
+            <label>Nazwisko</label>
             <input type="number" name="baggage_number" placeholder="Podaj liczbę walizek" class="number_of_suitcases" />
-            <label>Telefon</label>
+            <label>Ilość Bagażu</label>
             <input type="text" name="phone" placeholder="Podaj numer kontaktowy" class="telephone" />
+            <label>Telefon</label>
         </div>
         <input type="submit" class="submit" value="Dołącz" id="submit_form">
     </div>
@@ -60,6 +60,9 @@ $(function () {
         const exactDiv = $(this);
 
         exactDiv.next().slideToggle()
+        if(exactDiv.css('background-color') === "rgba(128, 188, 245, 0.52)"){
+            exactDiv.css('background-color','#80f5c485')
+        }else{exactDiv.css('background-color','rgba(128, 188, 245, 0.52)')}
     })
 
     // Joining the trip
@@ -143,12 +146,12 @@ $(function () {
         const eachDivValue = tripDivs.find('#placeTo');
 
         for (i = 0; i < eachDivValue.length; i++) {
-             const a = eachDivValue[i];
-    
+            const a = eachDivValue[i];
+
             if (a.innerHTML.toUpperCase().indexOf(filterValue) > -1) {
-                eachDivValue[i].parentElement.style.display ="";
+                eachDivValue[i].parentElement.style.display = "";
             } else {
-                eachDivValue[i].parentElement.style.display ="none";
+                eachDivValue[i].parentElement.style.display = "none";
             }
         }
     }
@@ -157,7 +160,7 @@ $(function () {
         filterFrom();
     })
 
-    function filterFrom(){
+    function filterFrom() {
         let filterValue, input, divSection, tripDivs, i;
 
         input = $('#filter_from_input');
@@ -167,12 +170,12 @@ $(function () {
         const eachDivValue = tripDivs.find('#placeFrom');
 
         for (i = 0; i < eachDivValue.length; i++) {
-             const a = eachDivValue[i];
-    
+            const a = eachDivValue[i];
+
             if (a.innerHTML.toUpperCase().indexOf(filterValue) > -1) {
-                eachDivValue[i].parentElement.style.display ="";
+                eachDivValue[i].parentElement.style.display = "";
             } else {
-                eachDivValue[i].parentElement.style.display ="none";
+                eachDivValue[i].parentElement.style.display = "none";
             }
         }
     }
