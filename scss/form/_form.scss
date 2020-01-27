@@ -1,3 +1,31 @@
+.head_form {
+  width: 100%;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: $base-font;
+  @include mobile {
+    height: 100px;
+  }
+  h1 {
+    color: $alt-text;
+    font-weight: 700;
+    font-size: 1.6rem;
+    padding: 0.5rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  h3 {
+    color: $alt-light-text;
+    padding: 0.5rem;
+    font-size: 1rem;
+    @include mobile {
+      text-align: center;
+    }
+  }
+}
 .main_form {
   width: 100%;
   height: 480px;
@@ -8,6 +36,9 @@
   font-family: $base-font;
   padding-bottom: 200px;
   margin-bottom: 5rem;
+  @include mobile{
+    justify-content: flex-start;
+  }
   label {
     margin-bottom: 0.6rem;
     color: #1d1d1f;
@@ -18,6 +49,10 @@
     position: absolute;
     bottom: -200px;
     right: 50px;
+    @include mobile{
+      right:0.6rem;
+      font-size: 1.6rem;
+    }
     &:hover {
       cursor: pointer;
     }
@@ -30,19 +65,25 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    @include mobile {
+      width: 99%;
+      height: 410px;
+    }
     textarea {
       position: absolute;
       bottom: -100px;
       left: 0;
       width: 650px;
-      max-width: 650px;
-      min-width: 650px;
       height: 130px;
       min-height: 130px;
       max-height: 130px;
       border: 1px solid #3e4444c5;
-        border-radius: 5px;
+      border-radius: 5px;
       resize: none;
+      @include mobile {
+        width: 99%;
+        border: 1px solid #acadadc5;
+      }
     }
     div {
       width: 50%;
@@ -57,6 +98,11 @@
         margin-bottom: 1.4rem;
         border: 1px solid #3e4444c5;
         border-radius: 5px;
+        @include mobile {
+          width: 96%;
+          border-radius: 2px;
+          border: 1px solid #acadadc5;
+        }
       }
     }
   }
@@ -64,63 +110,54 @@
 .form_img {
   width: 100%;
   height: 270px;
-  margin:0 auto;
-  opacity:0.8;
+  margin: 0 auto;
+  opacity: 0.8;
 }
 
-.head_form {
+.modal_popup {
   width: 100%;
-  height: 160px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  background-color: aliceblue;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  z-index: 1200;
   font-family: $base-font;
-  h1 {
-    color: $alt-text;
-    font-weight: 700;
-    font-size: 1.6rem;
-    padding: 0.5rem;
-    margin-top: 1.25rem;
-    margin-bottom: 1rem;
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    @include mobile {
+      font-size: 2.5rem;
+      margin-bottom: 3.4rem;
+    }
   }
   h3 {
-    color:$alt-light-text;
-    padding: 0.5rem;
-    font-size: 1rem;
+    font-size: 1.1rem;
+    margin-bottom: 1.9rem;
+    text-align: center;
+    @include mobile {
+      font-size: 1.6rem;
+      margin-bottom:4rem;
+      max-width:70vw;
+    }
   }
-}
-
-.modal_popup{
-    width:100%;
-    height:100%;
-    position: fixed;
-    top:0;
-    background-color: aliceblue;
+  a {
+    width: 300px;
+    height: 60px;
+    text-decoration: none;
+    background-color: $primary-color;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    z-index: 1200;
-    font-family: $base-font;
-    h2{
-        font-size: 2rem;
-        margin-bottom:30px;
+    justify-content: center;
+    color: white;
+    border-radius: 50px;
+    text-align: center;
+    @include mobile {
+      font-size: 1.4rem;
     }
-    h3{
-        font-size: 1.1rem;
-        margin-bottom:1.9rem;
-    }
-    a{
-        width: 300px;
-        height: 60px;
-        text-decoration: none;
-        background-color: $primary-color;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color:white;
-        border-radius: 50px;
-        
-    }
+  }
 }
