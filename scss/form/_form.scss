@@ -17,17 +17,15 @@
     margin-top: 1.25rem;
     margin-bottom: 1rem;
     @include mobile {
-     font-size:2rem;
+      font-size: 2rem;
     }
   }
   h3 {
     color: $alt-light-text;
     padding: 0.5rem;
-    font-size: 1rem;
-    @include mobile {
-      text-align: center;
-      font-size: 1.2rem;
-    }
+    font-size: 1.2rem;
+    line-height: 1.4;
+    text-align: center;
   }
 }
 .main_form {
@@ -40,7 +38,7 @@
   font-family: $base-font;
   padding-bottom: 200px;
   margin-bottom: 5rem;
-  @include mobile{
+  @include mobile {
     justify-content: flex-start;
     margin: auto;
   }
@@ -48,15 +46,20 @@
     margin-bottom: 0.6rem;
     color: #1d1d1f;
     font-weight: 400;
+    @include mobile {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
   }
   .submit {
     @include button;
     position: absolute;
     bottom: -200px;
     right: 50px;
-    @include mobile{
-      right:0.6rem;
+    @include mobile {
+      right: 1rem;
       font-size: 1.6rem;
+      bottom: -160px;
     }
     &:hover {
       cursor: pointer;
@@ -72,7 +75,7 @@
     position: relative;
     @include mobile {
       width: 100%;
-      height: 410px;
+      height: 430px;
     }
     textarea {
       position: absolute;
@@ -80,14 +83,14 @@
       left: 0;
       width: 650px;
       height: 130px;
-      min-height: 130px;
-      max-height: 130px;
       border: 1px solid #3e4444c5;
       border-radius: 5px;
       resize: none;
       @include mobile {
         width: 92%;
-        left:12px;
+        left: 11px;
+        bottom: -70px;
+        height: 80px;
       }
     }
     div {
@@ -97,7 +100,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
-      @include mobile{
+      @include mobile {
         align-items: center;
       }
       input {
@@ -107,7 +110,8 @@
         border: 1px solid #3e4444c5;
         border-radius: 5px;
         @include mobile {
-          width: 86%;
+          width: 90%;
+          margin-bottom: 1.6rem;
         }
       }
     }
@@ -147,8 +151,8 @@
     text-align: center;
     @include mobile {
       font-size: 1.6rem;
-      margin-bottom:4rem;
-      max-width:70vw;
+      margin-bottom: 4rem;
+      max-width: 70vw;
     }
   }
   a {
@@ -166,4 +170,8 @@
       font-size: 1.4rem;
     }
   }
+}
+
+#trip_date {
+  -webkit-appearance: none;
 }
