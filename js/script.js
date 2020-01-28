@@ -93,7 +93,6 @@ $(function () {
 
         currentText = texts[count];
         letter = currentText.slice(0, ++index);
-
         placeForTypingText.textContent = letter;
 
         const timeoutId = setTimeout(typing, 130)
@@ -104,7 +103,7 @@ $(function () {
             placeForTypingText.classList.remove("typing");
         }
 
-    }())
+    }());
 
 })
 

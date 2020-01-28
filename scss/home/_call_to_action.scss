@@ -48,13 +48,13 @@
       white-space: nowrap;
       animation-name: headerSlideIn;
       &:nth-of-type(1){
-        animation-duration: 1s;
+        animation-duration: 1.8s;
       }
       &:nth-of-type(2){
-        animation-duration: 2s;
+        animation-duration: 2.8s;
       }
       &:nth-of-type(3){
-        animation-duration: 2.6s;
+        animation-duration: 3.6s;
       }
       @include mobile {
         font-size: 2.6rem;
@@ -101,33 +101,4 @@
   animation: blinking 0.5s infinite ease;
 }
 
-@keyframes blinking {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 
-@keyframes opacityHeader{
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes headerSlideIn {
-  from {
-    opacity: 0;
-    z-index: -1;
-    transform: translate(60rem, 0);
-  }
-  to {
-    opacity: 1;
-    z-index: 100;
-    transform: translate(0);
-  }
-}
