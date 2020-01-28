@@ -63,43 +63,48 @@ $(function () {
 
     $('.text').slideDown(1000)
 
-    $('.hamburger_icon').on('click',function(){
+    $('.hamburger_icon').on('click', function () {
         $('.page-nav-list').toggleClass('toggle_menu');
     })
 
     const navList = $('.page-nav-list').children();
-    
-    for (let i=0; i<navList.length; i++){
-        navList.on('click',function(){
+
+    for (let i = 0; i < navList.length; i++) {
+        navList.on('click', function () {
             $('.page-nav-list').toggleClass('toggle_menu');
         })
     }
 
-    const texts = ["lotniska"];
-        let count = 0;
-        let index = 0;
-        let currentText = "";
-        let letter = "";
 
-    (function typing(){
+    //Typing Text
 
-        // if(count === texts.length){
-        //     count = 0;
-        // }
+    const texts = ["Wspólne przejazdy to tańsze podróżwanie."];
+    let count = 0;
+    let index = 0;
+    let currentText = "";
+    let letter = "";
+    const placeForTypingText = document.querySelector('.typing');
+
+    (function typing() {
+
+        if (count === texts.length) {
+            count = 0;
+        }
 
         currentText = texts[count];
-        letter = currentText.slice(0,++index);
+        letter = currentText.slice(0, ++index);
 
-        document.querySelector('.typing').textContent = letter;
+        placeForTypingText.textContent = letter;
 
-        // if(letter.length === currentText.length){
-        //     count++;
-        //     index=0;
-        // }
+        const timeoutId = setTimeout(typing, 130)
 
-        setTimeout(typing,200)
+        if (letter.length === currentText.length) {
+            letter = texts[0];
+            clearTimeout(timeoutId)
+            placeForTypingText.classList.remove("typing");
+        }
+
     }())
-
 
 })
 
