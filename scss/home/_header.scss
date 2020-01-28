@@ -12,6 +12,9 @@ header {
   position: fixed;
   background-color: #fff;
   white-space: nowrap;
+  @include mobile{
+    max-width: 790px;
+  }
   .page-logo {
     width: 270px;
     max-width: 270px;
