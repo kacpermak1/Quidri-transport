@@ -43,7 +43,7 @@
 
 .admin_mid_section {
   width: 100%;
-  height: 180px;
+  height: 220px;
   margin-top: 9rem;
   display: flex;
   flex-direction: column;
@@ -78,6 +78,10 @@
     align-items: center;
     justify-content: center;
     margin: 0.6rem;
+    margin-top:3rem;
+    @include mobile{
+      margin-top:4rem;
+    }
     .input_wrapper {
       width: 22%;
       height: 2.7rem;
