@@ -124,12 +124,14 @@
           color: rgba(4, 54, 63, 0.397);
           font-size: 0.8rem;
           padding-top: 0.25rem;
+          z-index: 120;
           @include mobile {
             font-size: 1.2rem;
           }
         }
         @include mobile {
           width: 89%;
+          height:3rem;
           margin-bottom: 1.6rem;
           margin-left:2%;
         }
