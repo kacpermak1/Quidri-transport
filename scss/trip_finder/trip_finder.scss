@@ -106,7 +106,7 @@
   min-height:500px;
   display: flex;
   flex-direction: column;
-  margin:0 auto;
+  margin-bottom: 4rem;
   @include mobile{
     min-height: 60vh;
   }
@@ -217,7 +217,7 @@
               font-size:1.2rem;
             }
         }
-        #submit_form{
+        .submit_form_button{
             @include button;
             position: absolute;
             margin:0;

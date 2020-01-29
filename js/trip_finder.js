@@ -25,7 +25,7 @@ $(function () {
         for (let i = 0; i < tripsOnWebsite.length; i++) {
             const tripOnWebsite = tripsOnWebsite[i];
             const html = $(`
-<div class="trip_div form_inactive">
+<div class="trip_div form_inactive" data-id="${tripOnWebsite.tripId}">
         <h2 id="placeTo">${tripOnWebsite.placeTo}</h2>
         <h2 id="placeFrom">${tripOnWebsite.placeFrom}</h2>
         <h2>${tripOnWebsite.date}</h2>
@@ -49,7 +49,7 @@ $(function () {
             <input type="text" name="phone" placeholder="Your Phone Number" class="telephone" />
             <label>Phone Number</label>
         </div>
-        <input type="submit" class="submit" value="JOIN" id="submit_form">
+        <input type="submit" class="submit submit_form_button" value="JOIN" />
     </div>
 </form>`);
             trips.append(html);
@@ -81,7 +81,8 @@ $(function () {
         const date = thisForm.prev().find('h2').eq(2).text();
         const time = thisForm.prev().find('h2').eq(3).text();
         const price = thisForm.prev().find('h2').eq(4).text();
-        const formAdditionalInfo = "Prośba o dołączenie!";
+        const tripId = thisForm.prev().data('id');
+        const formAdditionalInfo = "Request to join the trip id: " + tripId;
         let formName = thisForm.find('.name');
         let formSurname = thisForm.find('.surname');
         let formNumberOfPeople = thisForm.find('.number_of_people');
@@ -91,9 +92,9 @@ $(function () {
 
         const errors = [];
 
-        if (formName.val() === "") { errors.push("Podaj imię") } else if (formSurname.val() === "") { errors.push("Podaj Nazwisko") } else if (formNumberOfPeople.val() <= 0) { errors.push("Podaj liczbę osób") } else if (
-            /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(formEmail.val() !== true) || formEmail.val() === "") { errors.push("Podaj poprawny adres email") } else if (
-            formNumberOfSuitcases.val() < 0 || formNumberOfSuitcases.val() === "") { errors.push("Podaj poprawną liczbę walizek") } else if (formPhoneNumber.val().length < 0 || formPhoneNumber.val() === "") { errors.push("Podaj poprawny numer telefonu") } else {
+        if (formName.val() === "") { errors.push("Please enter your name") } else if (formSurname.val() === "") { errors.push("Please enter your surname") } else if (formNumberOfPeople.val() <= 0) { errors.push("Please enter the number of passengers") } else if (
+            /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(formEmail.val() !== true) || formEmail.val() === "") { errors.push("Please enter correct email address") } else if (
+            formNumberOfSuitcases.val() < 0 || formNumberOfSuitcases.val() === "") { errors.push("Please enter the number of bags") } else if (formPhoneNumber.val().length < 0 || formPhoneNumber.val() === "") { errors.push("Please enter your phone number") } else {
 
                 addTrip(formName.val(), formSurname.val(), date, from, to, time, formNumberOfPeople.val(), formEmail.val(), formAdditionalInfo, formNumberOfSuitcases.val(), formPhoneNumber.val(), price);
                 formName.val('');

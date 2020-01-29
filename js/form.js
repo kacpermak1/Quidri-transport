@@ -20,11 +20,11 @@ $(function () {
 
         const errors = [];
 
-        if (formName.val() === "") { errors.push("Podaj imię") } else if (formSurname.val() === "") { errors.push("Podaj Nazwisko") } else if (
-            formPlaceFrom.val() === "") { errors.push("Podaj adres odbioru") } else if (formPlaceTo.val() === "") { errors.push("Podaj adres miejsca docelowego") } else if (
-                formStartTime.val().length < 4 || formStartTime.val() === "") { errors.push("Podaj dokładną godzinę") } else if (formNumberOfPeople.val() <= 0) { errors.push("Podaj liczbę osób") } else if (
-                    /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(formEmail.val()) !== true || formEmail.val() === "") { errors.push("Podaj poprawny adres email") } else if (
-                    formNumberOfSuitcases.val() < 0 || formNumberOfSuitcases.val() === "") { errors.push("Podaj poprawną liczbę walizek") } else if (formPhoneNumber.val().length < 0 || formPhoneNumber.val() === "") { errors.push("Podaj poprawny numer telefonu") } else if (formDate.val() === "") { errors.push("Podaj datę wyjazdu") } else {
+        if (formName.val() === "") { errors.push("Please enter your name") } else if (formSurname.val() === "") { errors.push("Please enter your surname") } else if (
+            formPlaceFrom.val() === "") { errors.push("Please enter your pick up address") } else if (formPlaceTo.val() === "") { errors.push("Please enter your destination address") } else if (
+                formStartTime.val().length < 4 || formStartTime.val() === "") { errors.push("Please enter your pick up time. E.g. 10:30") } else if (formNumberOfPeople.val() <= 0) { errors.push("Please enter the number of passengers") } else if (
+                    /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(formEmail.val()) !== true || formEmail.val() === "") { errors.push("Please enter your email address") } else if (
+                    formNumberOfSuitcases.val() < 0 || formNumberOfSuitcases.val() === "") { errors.push("Please enter the number of bags") } else if (formPhoneNumber.val().length < 0 || formPhoneNumber.val() === "") { errors.push("Please enter your phone number") } else if (formDate.val() === "" || !formDate.val().match('^[0-9]{2}[.]{1}[0-9]{2}[.]{1}[0-9]{4}$')) { errors.push("Please enter the valid pick up date in format DD.MM.YYYY") } else {
 
                         addTrip(formName.val(), formSurname.val(), formDate.val().split('-').reverse().join('-'), formPlaceFrom.val(), formPlaceTo.val(), formStartTime.val(), formNumberOfPeople.val(), formEmail.val(), formAdditionalInfo.val(), formNumberOfSuitcases.val(), formPhoneNumber.val(), price);
 

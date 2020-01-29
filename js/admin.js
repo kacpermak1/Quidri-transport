@@ -45,10 +45,11 @@ $(function () {
         const dateToWebsite = $(this).parent().find('h2').eq(2).find('span').text();
         const tripStartToWebsite = $(this).parent().find('h2').eq(3).find('span').text();
         const tripPrice = prompt('Podaj cenę przejazdu');
+        const tripIdShort = $(this).parent().find('.id_span').text();
 
         if (tripPrice === "" || tripPrice === null) { alert('musisz podać cenę') } else {
 
-            addTripOnWebsite(tripTo, tripFrom, dateToWebsite, tripStartToWebsite, tripPrice);
+            addTripOnWebsite(tripTo, tripFrom, dateToWebsite, tripStartToWebsite, tripPrice, tripIdShort);
 
             alert(`Przejazd numer: ${idTrip} z ${tripFrom} do ${tripTo} został dodany na stronę internetową`)
         };
@@ -71,7 +72,7 @@ $(function () {
             <h2>Liczba walizek: <span>${trip.suitcases}</span></h2>
             <h2>email: <span class="email_span">${trip.email}</span></h2>
             <h2>Numer telefonu: <span>${trip.phoneNumber}</span></h2>
-            <p>Dodatkowe informacje: <span>${trip.addInfo}</span></p>
+            <p>Dodatkowe informacje: <span class="add_info_span">${trip.addInfo}</span></p>
             <button class="admin_add_button">Dodaj na stronę</button>
             <button class="admin_edit_button">Edytuj</button>
             <button class="admin_delete_button">Usuń z bazy danych</button>
@@ -82,13 +83,14 @@ $(function () {
         }
     }
 
-    function addTripOnWebsite(placeTo, placeFrom, date, startTime, price) {
+    function addTripOnWebsite(placeTo, placeFrom, date, startTime, price, tripIdShort) {
         const tripsOnWebsite = {
             date: date,
             placeFrom: placeFrom,
             placeTo: placeTo,
             startTime: startTime,
-            price: price
+            price: price,
+            tripId: tripIdShort
         };
 
         const newTrip = firebase.database().ref('tripsOnWebsite');
@@ -151,7 +153,7 @@ $(function () {
         firebase.database().ref('trips').child(id).set(trips)
     };
 
-    $('.hamburger_icon').on('click',function(){
+    $('.hamburger_icon').on('click', function () {
         $('.page-nav-list').toggleClass('toggle_menu');
     })
 
