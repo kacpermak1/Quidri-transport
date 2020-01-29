@@ -200,6 +200,7 @@
             &::placeholder{
               color: rgba(4, 54, 63, 0.397);
               font-size: 0.8rem;
+              padding-top:0.3rem;
               @include mobile{
                 font-size: 1.1rem;
               }

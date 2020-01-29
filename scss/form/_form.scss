@@ -96,6 +96,7 @@
         padding-top: 2px;
         @include mobile {
           font-size: 1.2rem;
+          padding-top: 0;
         }
       }
       @include mobile {
@@ -123,15 +124,14 @@
         &::placeholder {
           color: rgba(4, 54, 63, 0.397);
           font-size: 0.8rem;
-          padding-top: 0.25rem;
-          z-index: 120;
+          padding-top:0.3rem;
           @include mobile {
             font-size: 1.2rem;
+            padding-top:0;
           }
         }
         @include mobile {
           width: 89%;
-          height:3rem;
           margin-bottom: 1.6rem;
           margin-left:2%;
         }
