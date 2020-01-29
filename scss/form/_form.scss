@@ -112,7 +112,7 @@
       justify-content: center;
       align-items: flex-start;
       @include mobile {
-        align-items: center;
+        margin-left:2%;
       }
       input {
         width: 300px;
@@ -130,7 +130,7 @@
           }
         }
         @include mobile {
-          width: 90%;
+          width: 92%;
           margin-bottom: 1.6rem;
         }
       }
