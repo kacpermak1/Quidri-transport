@@ -100,4 +100,7 @@
   height: 2.2rem;
   border-right: 2px solid white;
   animation: blinking 0.5s infinite ease;
+  @include mobile{
+    display: none;
+  }
 }
