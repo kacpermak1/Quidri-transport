@@ -13,7 +13,7 @@
   background-size: cover;
   @include mobile {
     height: 90vh;
-    background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url("../assets/car1-1.jpeg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../assets/car1-1.jpeg");
   }
   @include landscape {
     height: 150vh;
@@ -31,11 +31,11 @@
       align-items: flex-start;
       height: 26%;
       justify-content: flex-start;
-      margin-top:0;
+      margin-top: 0;
       margin-left: 1rem;
       padding-top: 8rem;
     }
-    @media screen and(max-width:360px) and (max-height:586px){
+    @media screen and(max-width:360px) and (max-height: 586px) {
       height: 30%;
       padding-top: 0;
     }
@@ -47,13 +47,13 @@
       padding: 0 1.6rem 0 1.6rem;
       white-space: nowrap;
       animation-name: headerSlideIn;
-      &:nth-of-type(1){
+      &:nth-of-type(1) {
         animation-duration: 1.8s;
       }
-      &:nth-of-type(2){
+      &:nth-of-type(2) {
         animation-duration: 2.8s;
       }
-      &:nth-of-type(3){
+      &:nth-of-type(3) {
         animation-duration: 3.6s;
       }
       @include mobile {
@@ -69,8 +69,9 @@
     font-weight: 600;
     @include mobile {
       text-align: center;
-      line-height: 1.2;
-      margin:0 1.2rem 0 1.2rem;
+      font-size: 2rem;
+      line-height: 1.4;
+      margin: 0 3rem 0 3rem;
     }
   }
   .button {
@@ -100,5 +101,3 @@
   border-right: 2px solid white;
   animation: blinking 0.5s infinite ease;
 }
-
-

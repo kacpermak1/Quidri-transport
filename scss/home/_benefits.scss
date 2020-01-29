@@ -5,9 +5,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  margin-bottom:1rem ;
-  margin:0 auto;
-  @include mobile{
+  margin-bottom: 1rem;
+  margin: 0 auto;
+  @include mobile {
     height: 260vh;
     justify-content: space-evenly;
   }
@@ -18,10 +18,10 @@
     justify-content: center;
     align-items: flex-end;
     flex-direction: row;
-    @include mobile{
+    @include mobile {
       flex-direction: column;
       align-items: center;
-      margin-top:3rem;
+      margin-top: 3rem;
     }
     h2 {
       color: $alt-text;
@@ -31,7 +31,7 @@
       margin-bottom: 6px;
       text-transform: uppercase;
       word-spacing: 3px;
-      @include mobile{
+      @include mobile {
         font-size: 2.2rem;
         text-align: center;
       }
@@ -54,8 +54,8 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    @include mobile{
-      height:216vh;
+    @include mobile {
+      height: 216vh;
       flex-direction: column;
       justify-content: space-between;
     }
@@ -66,23 +66,23 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      margin:1rem;
-      @include mobile{
-        width:90%;
-        height:33%;
-        margin-bottom:2rem;
+      margin: 1rem;
+      @include mobile {
+        width: 90%;
+        height: 33%;
+        margin-bottom: 2rem;
         background-color: rgb(228, 230, 235);
         padding-bottom: 2rem;
       }
       img {
         width: 220px;
         height: 220px;
-        @include mobile{
-          width:260px;
-          height:260px;
+        @include mobile {
+          width: 260px;
+          height: 260px;
         }
-        &:hover{
-            cursor:pointer;
+        &:hover {
+          cursor: pointer;
         }
       }
       h2 {
@@ -93,24 +93,23 @@
         margin-bottom: 1rem;
         color: $alt-text;
         padding: 5px;
-        @include mobile{
-          font-size:2.2rem;
+        @include mobile {
+          font-size: 2.2rem;
         }
       }
-      p{
-          width:90%;
-          text-align: center;
-          height: 30%;
-          font-family: $base-font;
-          font-size: 1.1rem;
-          line-height: 20px;
-          color:rgb(112, 140, 145);
-          @include mobile{
-            font-size:1.6rem;
-            color:$alt-text;
-          }
+      p {
+        width: 90%;
+        text-align: center;
+        height: 30%;
+        font-family: $base-font;
+        font-size: 1.1rem;
+        line-height: 20px;
+        color: rgb(112, 140, 145);
+        @include mobile {
+          font-size: 1.6rem;
+          color: $alt-text;
+        }
       }
     }
   }
 }
-

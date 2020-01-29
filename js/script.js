@@ -89,19 +89,19 @@ $(function () {
 
         if (count === texts.length) {
             count = 0;
-        }
+        };
 
         currentText = texts[count];
         letter = currentText.slice(0, ++index);
         placeForTypingText.textContent = letter;
 
-        const timeoutId = setTimeout(typing, 130)
+        const timeoutId = setTimeout(typing, 130);
 
         if (letter.length === currentText.length) {
             letter = texts[0];
             clearTimeout(timeoutId)
             placeForTypingText.classList.remove("typing");
-        }
+        };
 
     }());
 

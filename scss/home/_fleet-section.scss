@@ -9,9 +9,9 @@
   position: relative;
   padding-top: 1rem;
   margin-top: 1rem;
-  @include mobile{
-    display:none
-    }
+  @include mobile {
+    display: none;
+  }
   div {
     width: 580px;
     height: 90%;
@@ -22,7 +22,6 @@
     font-weight: 600;
     font-size: 1.8rem;
     padding: 10px;
-    
   }
   .info {
     display: flex;
