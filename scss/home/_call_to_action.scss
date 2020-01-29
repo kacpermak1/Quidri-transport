@@ -48,13 +48,13 @@
       white-space: nowrap;
       animation-name: headerSlideIn;
       &:nth-of-type(1) {
-        animation-duration: 1.8s;
+        animation-duration: 1s;
       }
       &:nth-of-type(2) {
-        animation-duration: 3.1s;
+        animation-duration: 2s;
       }
       &:nth-of-type(3) {
-        animation-duration: 3.8s;
+        animation-duration: 2.2s;
       }
       @include mobile {
         font-size: 2.6rem;
@@ -90,8 +90,9 @@
 
 .typing {
   position: relative;
+  animation-name: opacityHeader;
+    animation-duration: 2s;
 }
-
 .typing::after {
   content: "";
   position: absolute;
