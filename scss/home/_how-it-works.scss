@@ -35,10 +35,12 @@
     font-size: 1.1rem;
     padding: 5px;
     margin-top: 1rem;
+    margin-bottom: 3rem;
     @include mobile{
       font-size: 1.8rem;
       text-align: center;
       margin-top:0;
+      margin-bottom: 0;
     }
   }
   .how_it_works_main {
@@ -123,6 +125,7 @@
         padding: 5px;
         text-transform: uppercase;
         margin-bottom:0.6rem;
+        width:80%;
         @include mobile{
           text-align: center;
           font-size:2.2rem;

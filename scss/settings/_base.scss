@@ -7,10 +7,6 @@
   display: none;
 }
 
-.active{
-  color: $primary-color;
-}
-
 @mixin button {
   display: flex;
   align-items: center;

@@ -34,22 +34,22 @@ $(function () {
 </div>
     <form class="trip_finder_form" style="display:none" method="POST">
         <div>    
-            <input type="text" name="name" placeholder="Podaj imię" class="name" />  
-            <label>Imię</label>          
-            <input type="number" name="passangers_number" placeholder="Podaj liczbę osób" class="number_of_people" />
-            <label>Liczba Osób</label>
-            <input type="email" name="email" placeholder="Podaj email" class="email" />    
-            <label>Email</label>    
+            <input type="text" name="name" placeholder="Your Name" class="name" />  
+            <label>Name</label>          
+            <input type="number" name="passangers_number" placeholder="Number Of Passengers" class="number_of_people" />
+            <label>Number of Passengers</label>
+            <input type="email" name="email" placeholder="Email" class="email" />    
+            <label>Your email</label>    
         </div>
         <div>
-            <input type="text" name="surname" placeholder="Podaj nazwisko" class="surname" />
-            <label>Nazwisko</label>
-            <input type="number" name="baggage_number" placeholder="Podaj liczbę walizek" class="number_of_suitcases" />
-            <label>Ilość Bagażu</label>
-            <input type="text" name="phone" placeholder="Podaj numer kontaktowy" class="telephone" />
-            <label>Telefon</label>
+            <input type="text" name="surname" placeholder="Your Surname" class="surname" />
+            <label>Surname</label>
+            <input type="number" name="baggage_number" placeholder="Number Of Bags" class="number_of_suitcases" />
+            <label>Number of Bags</label>
+            <input type="text" name="phone" placeholder="Your Phone Number" class="telephone" />
+            <label>Phone Number</label>
         </div>
-        <input type="submit" class="submit" value="Dołącz" id="submit_form">
+        <input type="submit" class="submit" value="JOIN" id="submit_form">
     </div>
 </form>`);
             trips.append(html);

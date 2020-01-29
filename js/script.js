@@ -78,7 +78,7 @@ $(function () {
 
     //Typing Text
 
-    const texts = ["Wspólne przejazdy to tańsze podróżwanie."];
+    const texts = ["Travel with others and get the best price!"];
     let count = 0;
     let index = 0;
     let currentText = "";

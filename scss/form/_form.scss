@@ -44,8 +44,9 @@
   }
   label {
     margin-bottom: 0.6rem;
-    color: #1d1d1f;
+    color: $alt-text;
     font-weight: 400;
+    text-transform: capitalize;
     @include mobile {
       font-size: 1.2rem;
       margin-bottom: 1rem;
@@ -84,12 +85,12 @@
       left: 0;
       width: 650px;
       height: 130px;
-      border: 1px solid #3e4444c5;
+      border: 1px solid $alt-light-text;
       border-radius: 5px;
       resize: none;
       font-size: 1.2rem;
       &::placeholder {
-        color: rgb(204, 204, 204);
+        color: rgba(4, 54, 63, 0.397);
         font-size: 1rem;
         padding-top: 2px;
         @include mobile {
@@ -117,11 +118,11 @@
         width: 300px;
         height: 30px;
         margin-bottom: 1.4rem;
-        border: 1px solid #3e4444c5;
+        border: 1px solid $alt-light-text;
         border-radius: 5px;
         font-size: 1.2rem;
         &::placeholder {
-          color: rgb(204, 204, 204);
+          color: rgba(4, 54, 63, 0.397);
           font-size: 0.8rem;
           @include mobile {
             font-size: 1.2rem;

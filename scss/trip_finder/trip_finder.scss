@@ -198,7 +198,7 @@
             color: $alt-text;
             font-size: 1.2rem;
             &::placeholder{
-              color: rgba(5, 71, 82, 0.205);
+              color: rgba(4, 54, 63, 0.397);
               font-size: 0.8rem;
               @include mobile{
                 font-size: 1.1rem;
@@ -211,6 +211,7 @@
         label{
             margin-bottom:12px;
             color: $alt-text;
+            text-transform: capitalize;
             @include mobile{
               font-size:1.2rem;
             }
@@ -219,7 +220,7 @@
             @include button;
             position: absolute;
             margin:0;
-            font-size:1rem;
+            font-size:1.2rem;
             bottom:5.5rem;
             @media screen and (max-width:1360px){
               margin-left:0;

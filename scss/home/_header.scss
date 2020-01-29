@@ -85,6 +85,16 @@ header {
         font-size: 0.8rem;
         margin-right: 0.6rem;
       }
+      .active{
+        color: $primary-color;
+        border-bottom: 3px solid $primary-color;
+        padding-bottom: 24px;
+        text-transform: uppercase;
+        @include mobile{
+          border-bottom: none;
+          padding-bottom: 0;
+        }
+      }
       &:nth-of-type(1) {
         a {
           @include mobile{
