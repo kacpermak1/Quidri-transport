@@ -16,38 +16,38 @@
         <a href="admin_panel.html" class="page-logo"></a>
         <ul class="page-nav-list">
             <li><a>ADMIN PANEL:</a></li>
-            <li><a href="admin_panel.html">REZERWACJE</a></li>
-            <li><a href="admin_panel_add.html">DODAJ/USUŃ PRZEJAZDY</a></li>
+            <li><a href="admin_panel.html">All Bookings</a></li>
+            <li><a href="admin_panel_add.html" class="active">Add/Remove Trips</a></li>
         </ul>
         <i class="fas fa-bars hamburger_icon" aria-hidden="true"></i>
     </header>
     <img class="form_img" src="./assets/highway.jpg" />
-    <h2 class="admin_h2">Dodaj przejazd na stronę główną</h2>
+    <h2 class="admin_h2">Add to website manually</h2>
     <section class="add_to_website">
         <form class="main_form form_add" method="POST">
             <div class="parent">
                 <div>
-                    <label>Miejsce Odbioru</label>
-                    <input type="text" name="place_from" placeholder="Miejsce Odbioru" id="website_place_from" />
-                    <label>Data Wyjazdu</label>
+                    <label>From</label>
+                    <input type="text" name="place_from" placeholder="Place from" id="website_place_from" />
+                    <label>Date</label>
                     <input type="date" name="date" id="website_trip_date" />
                     <label class="nonvisible">Hidden</label>
                     <input class="nonvisible" />
                 </div>
                 <div>
-                    <label>Miejsce Docelowe</label>
-                    <input type="text" name="destination" placeholder="Miejsce Docelowe" id="website_place_to" />
-                    <label>Czas Wyjazdu</label>
-                    <input type="text" name="time" placeholder="Podaj godzinę wyjazdu" id="website_start_time" />
-                    <label>Cena</label>
-                    <input type="text" name="price" placeholder="Podaj cenę" id="price" />
+                    <label>To</label>
+                    <input type="text" name="destination" placeholder="To" id="website_place_to" />
+                    <label>Start time</label>
+                    <input type="text" name="time" placeholder="Start time" id="website_start_time" />
+                    <label>Price</label>
+                    <input type="text" name="price" placeholder="Promo price" id="price" />
                 </div>
-                <input type="submit" class="submit" value="Dodaj" id="website_submit">
+                <input type="submit" class="submit" value="Add to website" id="website_submit">
             </div>
         </form>
     </section>
     <div class="admin_mid_section">
-        <h2 class="admin_h2">Usuń lub edytuj przejazd ze strony internetowej</h2>
+        <h2 class="admin_h2">Edit or remove trips from website</h2>
         <div class="admin_filters_wrapper">
             <div class="input_wrapper">
                 <input type="text" placeholder="Place to" id="filter_to_input">
@@ -63,11 +63,11 @@
             </div>
         </div>
         <div class="admin_add_trips_info">
-            <h2>Kierunek</h2>
-            <h2>Wyjazd z</h2>
-            <h2>Data wyjazdu</h2>
-            <h2>Godzina Wyjazdu</h2>
-            <h2>Cena</h2>
+            <h2>To</h2>
+            <h2>From</h2>
+            <h2>Date</h2>
+            <h2>Start time</h2>
+            <h2>Price</h2>
         </div>
     </div>
     <section class="list_on_website">

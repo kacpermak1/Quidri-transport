@@ -6,8 +6,8 @@ $(function () {
 
     tripsList.on('click', '.admin_delete_button', function () {
         const id = $(this).parent().data('id');
-        const ask = prompt(`Czy na pewno chcesz usunąć rezerwację numer: ${id} z bazy danych? Wprowadź "tak" lub "nie"`);
-        if (ask === "tak") { removeTrip(id) } else { alert('Nie usunięto rezerwacji') }
+        const ask = prompt(`Are you sure you want to remove booking: ${id} from database? Enter "yes" or "no"`);
+        if (ask === "yes") { removeTrip(id) } else { alert('Booking has not been removed') }
 
     });
 
@@ -44,14 +44,14 @@ $(function () {
         const tripTo = $(this).parent().find('h2').eq(1).find('span').text();
         const dateToWebsite = $(this).parent().find('h2').eq(2).find('span').text();
         const tripStartToWebsite = $(this).parent().find('h2').eq(3).find('span').text();
-        const tripPrice = prompt('Podaj cenę przejazdu');
+        const tripPrice = prompt('Enter the promo price that will show on the website');
         const tripIdShort = $(this).parent().find('.id_span').text();
 
-        if (tripPrice === "" || tripPrice === null) { alert('musisz podać cenę') } else {
+        if (tripPrice === "" || tripPrice === null) { alert('You shold enter the price') } else {
 
             addTripOnWebsite(tripTo, tripFrom, dateToWebsite, tripStartToWebsite, tripPrice, tripIdShort);
 
-            alert(`Przejazd numer: ${idTrip} z ${tripFrom} do ${tripTo} został dodany na stronę internetową`)
+            alert(`Booking: ${idTrip} z ${tripFrom} do ${tripTo} has been successfully added to website`)
         };
 
     });
@@ -63,20 +63,20 @@ $(function () {
             const html = $(`
             <div data-id="${id[i]}">
             <h1>Booking ID: <span class="id_span">${bookingNo[i].toUpperCase()}</span></h1>
-            <h2>Wyjazd z: <span class="place_from">${trip.placeFrom}</span></h2>
-            <h2>Do: <span class="place_to">${trip.placeTo}</span></h2>
-            <h2>Data wyjazdu: <span class="date_span">${trip.date}</span></h2>
-            <h2>Godzina Wyjazdu: <span>${trip.startTime}</span></h2>
-            <h2>Imię Nazwisko: <span class="surname">${trip.surname}</span><span class="name">${trip.name}</span></h2>
-            <h2>Liczba osób: <span>${trip.numOfPeople}</span></h2>
-            <h2>Liczba walizek: <span>${trip.suitcases}</span></h2>
-            <h2>email: <span class="email_span">${trip.email}</span></h2>
-            <h2>Numer telefonu: <span>${trip.phoneNumber}</span></h2>
-            <p>Dodatkowe informacje: <span class="add_info_span">${trip.addInfo}</span></p>
-            <button class="admin_add_button">Dodaj na stronę</button>
-            <button class="admin_edit_button">Edytuj</button>
-            <button class="admin_delete_button">Usuń z bazy danych</button>
-            <h2>Cena Promocyjna: <span>${trip.price}</span></h2>
+            <h2>From: <span class="place_from">${trip.placeFrom}</span></h2>
+            <h2>To: <span class="place_to">${trip.placeTo}</span></h2>
+            <h2>Date: <span class="date_span">${trip.date}</span></h2>
+            <h2>Start Time: <span>${trip.startTime}</span></h2>
+            <h2>Name: <span class="surname">${trip.surname}</span><span class="name">${trip.name}</span></h2>
+            <h2>Number of Passengers: <span>${trip.numOfPeople}</span></h2>
+            <h2>Number of Bags: <span>${trip.suitcases}</span></h2>
+            <h2>Email: <span class="email_span">${trip.email}</span></h2>
+            <h2>Phone Number: <span>${trip.phoneNumber}</span></h2>
+            <p>Additional Info: <span class="add_info_span">${trip.addInfo}</span></p>
+            <button class="admin_add_button">Add to website</button>
+            <button class="admin_edit_button">Edit</button>
+            <button class="admin_delete_button">Remove from database</button>
+            <h2>Promo price: <span>${trip.price}</span></h2>
         </div>
             `);
             tripsList.append(html);
@@ -109,7 +109,7 @@ $(function () {
             const addInfo = li.find('p').find('span');
             const addInfoVal = addInfo.text();
             addInfo.replaceWith(`<input class="info_edit" value="${addInfoVal}" />`);
-            btn.text('Zatwierdź');
+            btn.text('Confirm');
         } else {
             // second click
 
@@ -128,7 +128,7 @@ $(function () {
             const inputInfo = li.find('.info_edit');
             const infoVal = inputInfo.val();
             inputInfo.replaceWith(`<span>${infoVal}</span>`);
-            btn.text('Edytuj');
+            btn.text('Edit');
 
             updateInfo(id, name, surname, date, tripFrom, tripTo, tripStart, peopleNo, email, infoVal, suitcasesNo, mobile, price);
         }

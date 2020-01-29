@@ -217,7 +217,7 @@
               font-size:1.2rem;
             }
         }
-        .submit_form_button{
+        input.submit_form_button{
             @include button;
             position: absolute;
             margin:0;

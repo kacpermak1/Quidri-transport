@@ -13,7 +13,7 @@ $(function () {
     const formAdditionalInfo = form.find('#add_info');
     const formNumberOfSuitcases = form.find('#number_of_suitcases');
     const formPhoneNumber = form.find('#telephone');
-    const price = "brak";
+    const price = "";
 
     form.on('submit', function (e) {
         e.preventDefault();

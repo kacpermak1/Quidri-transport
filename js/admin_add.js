@@ -40,8 +40,8 @@ $(function () {
             <h2 class="date_value">${tripOnWebsite.date}</h2>
             <h2>${tripOnWebsite.startTime}</h2>
             <h2>${tripOnWebsite.price}</h2>
-            <button class="edit_info_website">Edytuj</button>
-            <button class="remove_from_website">Usuń</button>
+            <button class="edit_info_website">Edit</button>
+            <button class="remove_from_website">Remove</button>
         </div>`);
             listOnWebsite.append(html);
         }
@@ -61,7 +61,7 @@ $(function () {
         websiteDate.val('');
         websiteStartTime.val('');
         websitePrice.val('');
-        alert('Dodano przejazd');
+        alert('Added successfully');
     })
 
     function addTripOnWebsite(placeTo, placeFrom, date, startTime, price) {
@@ -101,7 +101,7 @@ $(function () {
             dateTrip.replaceWith(`<input class="date" value="${dateVal}" />`);
             timeTrip.replaceWith(`<input class="time" value="${timeVal}" />`);
             priceTrip.replaceWith(`<input class="price" value="${priceVal}" />`);
-            btn.text('Gotowe');
+            btn.text('Confirm');
         } else {
             // second click
             const inputFrom = li.find('.from');
@@ -119,7 +119,7 @@ $(function () {
             inputDate.replaceWith(`<h2>${dateVal}</h2>`);
             inputTime.replaceWith(`<h2>${timeVal}</h2>`);
             inputPrice.replaceWith(`<h2>${priceVal}</h2>`);
-            btn.text('Edytuj');
+            btn.text('Edit');
 
             updateTrip(id, dateVal, fromVal, toVal, timeVal, priceVal);
         }
