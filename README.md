@@ -27,6 +27,30 @@ also:
 - Firebase
 - Json server (initially)
 
+## Website
+
+![Quidri website Demo](demo/quidri1.png)
+
+![Quidri website Demo](demo/quidri2.png)
+
+![Quidri website Demo](demo/quidri3.png)
+
+![Quidri website Demo](demo/quidri4.gif)
+
+![Quidri website Demo](demo/quidri5.png)
+
+## Admin Panel
+
+![Quidri website Demo](demo/admin1.png)
+
+![Quidri website Demo](demo/admin2.png)
+
+![Quidri website Demo](demo/admin3.png)
+
+![Quidri website Demo](demo/admin4.png)
+
+![Quidri website Demo](demo/admin5.png)
+
 ## Preview:
 
 Here you can check all the functionality of this application. From booking trips on the website to managing them in the admin panel.
