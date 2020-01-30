@@ -78,7 +78,7 @@ $(function () {
 
     //Typing Text
 
-    const texts = ["Travel with others and get the best price!"];
+    const texts = ["Travel with others and pay less!"];
     let count = 0;
     let index = 0;
     let currentText = "";

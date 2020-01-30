@@ -34,7 +34,7 @@ $(function () {
         for (let i = 0; i < tripsOnWebsite.length; i++) {
             const tripOnWebsite = tripsOnWebsite[i];
             const html = $(`
-            <div class="each_trip" data-id="${id[i]}">
+            <div class="each_trip" data-id="${id[i]}" data-idshort="${tripOnWebsite.tripId}">
             <h2 class="place_to">${tripOnWebsite.placeTo}</h2>
             <h2 class="place_from">${tripOnWebsite.placeFrom}</h2>
             <h2 class="date_value">${tripOnWebsite.date}</h2>
@@ -83,6 +83,7 @@ $(function () {
         const btn = $(this)
         const li = btn.parent();
         const id = li.data('id');
+        const idShort = li.data('idshort');
         li.toggleClass('editable');
         if (li.hasClass('editable')) {
             // first click
@@ -120,18 +121,18 @@ $(function () {
             inputTime.replaceWith(`<h2>${timeVal}</h2>`);
             inputPrice.replaceWith(`<h2>${priceVal}</h2>`);
             btn.text('Edit');
-
-            updateTrip(id, dateVal, fromVal, toVal, timeVal, priceVal);
+            updateTrip(id, dateVal, fromVal, toVal, timeVal, priceVal, idShort);
         }
     });
 
-    function updateTrip(id,date,placeFrom,placeTo,startTime, price) {
+    function updateTrip(id,date,placeFrom,placeTo,startTime, price, idShort) {
         const tripsOnWebsite = {
             date: date,
             placeFrom: placeFrom,
             placeTo: placeTo,
             startTime: startTime,
-            price: price
+            price: price,
+            tripId: idShort
         };
 
         firebase.database().ref('tripsOnWebsite').child(id).set(tripsOnWebsite)};
