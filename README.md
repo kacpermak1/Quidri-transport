@@ -29,27 +29,26 @@ also:
 
 ## Website
 
-![Quidri website Demo](demo/quidri1.png)
+![Quidri website Demo](demo/quidri1.png)<br/>
 
-![Quidri website Demo](demo/quidri2.png)
+![Quidri website Demo](demo/quidri2.png)<br/>
 
-![Quidri website Demo](demo/quidri3.png)
+![Quidri website Demo](demo/quidri3.png)<br/>
 
-![Quidri website Demo](demo/quidri4.gif)
+![Quidri website Demo](demo/quidri4.gif)<br/>
 
-![Quidri website Demo](demo/quidri5.png)
+![Quidri website Demo](demo/quidri5.gif)
 
 ## Admin Panel
 
-![Quidri website Demo](demo/admin1.png)
+![Quidri website Demo](demo/admin1.gif)<br/>
 
-![Quidri website Demo](demo/admin2.png)
+![Quidri website Demo](demo/admin2.png)<br/>
 
-![Quidri website Demo](demo/admin3.png)
+![Quidri website Demo](demo/admin3.gif)<br/>
 
 ![Quidri website Demo](demo/admin4.png)
 
-![Quidri website Demo](demo/admin5.png)
 
 ## Preview:
 
