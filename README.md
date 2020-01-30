@@ -28,24 +28,26 @@ also:
 - Json server (initially)
 
 ## Website
+<br/>
 
-![Quidri website Demo](demo/quidri1.png)<br/>
+![Quidri website Demo](demo/quidri1.png)<br/><br/>
 
-![Quidri website Demo](demo/quidri2.png)<br/>
+![Quidri website Demo](demo/quidri2.png)<br/><br/>
 
-![Quidri website Demo](demo/quidri3.png)<br/>
+![Quidri website Demo](demo/quidri3.png)<br/><br/>
 
-![Quidri website Demo](demo/quidri4.gif)<br/>
+![Quidri website Demo](demo/quidri4.gif)<br/><br/>
 
-![Quidri website Demo](demo/quidri5.gif)
+![Quidri website Demo](demo/quidri5.gif)<br/><br/>
 
 ## Admin Panel
+<br/>
 
-![Quidri website Demo](demo/admin1.gif)<br/>
+![Quidri website Demo](demo/admin1.gif)<br/><br/>
 
-![Quidri website Demo](demo/admin2.png)<br/>
+![Quidri website Demo](demo/admin2.png)<br/><br/>
 
-![Quidri website Demo](demo/admin3.gif)<br/>
+![Quidri website Demo](demo/admin3.gif)<br/><br/>
 
 ![Quidri website Demo](demo/admin4.png)
 
