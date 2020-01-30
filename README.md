@@ -27,29 +27,57 @@ also:
 - Firebase
 - Json server (initially)
 
-## Website
-<br/>
+## Website 
 
-![Quidri website Demo](demo/quidri1.png)<br/><br/>
+![Quidri website Demo](demo/quidri1.png)
 
-![Quidri website Demo](demo/quidri2.png)<br/><br/>
+<br/><br/>
 
-![Quidri website Demo](demo/quidri3.png)<br/><br/>
+### Check if someone is heading to the same direction!
 
-![Quidri website Demo](demo/quidri4.gif)<br/><br/>
+![Quidri website Demo](demo/quidri2.png)
 
-![Quidri website Demo](demo/quidri5.gif)<br/><br/>
+<br/><br/>
 
-## Admin Panel
-<br/>
+![Quidri website Demo](demo/quidri3.png)
 
-![Quidri website Demo](demo/admin1.gif)<br/><br/>
+<br/><br/>
 
-![Quidri website Demo](demo/admin2.png)<br/><br/>
+### If you find the suitable ride just click on it, fill in the short form and submit. Data is stored and will appear on the admin panel with the information that this is a request to join a specific ride.
 
-![Quidri website Demo](demo/admin3.gif)<br/><br/>
+![Quidri website Demo](demo/quidri4.gif)
 
-![Quidri website Demo](demo/admin4.png)
+<br/><br/>
+
+### If you can't find any suitable dates, just fill in the main booking form. You still have a chance to get promotional price if admin decides to list your trip on the website and someone joins!
+
+![Quidri website Demo](demo/quidri5.gif)
+
+<br/><br/>
+
+## Admin Panel 
+
+### Admin can filter all bookings and list them on the website to get more people. Just click 'add to website' and enter the promo price.
+
+![Quidri website Demo](demo/admin1.gif)
+
+<br/><br/>
+
+### When the ride is finished or not confirmed, admin can remove booking from the database.
+
+![Quidri website Demo](demo/admin2.png)
+
+<br/><br/>
+
+### It's also possible to add the trip to the website manually. E.g. If booking doesn't come from website and company owner decides to list it.
+
+![Quidri website Demo](demo/admin3.gif)
+
+<br/><br/>
+
+### Each ride can be easly edited or removed from the website. Edit function is useful when the customer is giving the full address and admin wants to add this specific ride to website.
+
+![Quidri website Demo](demo/admin4.png)<br/>
 
 
 ## Preview:
