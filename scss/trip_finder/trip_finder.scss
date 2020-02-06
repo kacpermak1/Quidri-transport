@@ -1,6 +1,7 @@
 .first_info {
   width: 100%;
   height: 400px;
+  min-height:22vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,6 +10,7 @@
   font-family: $base-font;
   margin:0 auto;
   @include mobile{
+    min-height:none;
     height:40vh;
   }
   @media screen and(max-width:360px) and (max-height:586px){
@@ -37,6 +39,7 @@
   }
   .input_wrapper{
     width:30%;
+    max-width:500px;
     height:2.7rem;
     margin-top:1.4rem;
     position: relative;
@@ -78,6 +81,7 @@
   div.trip_info {
     width: 56vw;
     height: 80px;
+    max-width:1100px;
     display: flex;
     flex-direction: row;
     align-items: flex-end;
@@ -103,10 +107,10 @@
 .trip_finder_section {
   width: 100%;
   height: 100%;
-  min-height:500px;
+  min-height:33.5vh;
   display: flex;
   flex-direction: column;
-  margin-bottom: 4rem;
+  margin-bottom: 8rem;
   @include mobile{
     min-height: 60vh;
   }
@@ -123,6 +127,7 @@
     margin:0 auto;
     .trip_div {
       width: 56vw;
+      max-width:1100px;
       height: 80px;
       display: flex;
       flex-direction: row;
@@ -158,6 +163,7 @@
     .trip_finder_form{
         display: flex;
         height:220px;
+        max-width:900px;
         width:50vw;
         margin:5px;
         background-color:white;

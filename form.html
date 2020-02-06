@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="format-detection" content="telephone=no">
-    <script type="text/javascript"> (function() { const css = document.createElement('link'); css.href = 'https://use.fontawesome.com/releases/v5.1.0/css/all.css'; css.rel = 'stylesheet'; css.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(css); })(); </script>
+    <script
+        type="text/javascript"> (function () { const css = document.createElement('link'); css.href = 'https://use.fontawesome.com/releases/v5.1.0/css/all.css'; css.rel = 'stylesheet'; css.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(css); })(); </script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="css/main.css">
@@ -15,20 +16,22 @@
 
 <body class="form_main">
     <header>
-        <a href="index.html" class="page-logo"></a>
-        <ul class="page-nav-list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="trip_finder.html" class="active">Find a ride</a></li>
-            <li><a href="index.html#how_it_works">How it works</a></li>
-            <li><a href="index.html#benefits">Benefits</a></li>
-            <li><a href="index.html#footer">Contact</a></li>
-        </ul>
-        <i class="fas fa-bars hamburger_icon" aria-hidden="true"></i>
+        <div class="header__content">
+            <a href="index.html" class="page-logo"></a>
+            <ul class="page-nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="trip_finder.html" class="active">Find a ride</a></li>
+                <li><a href="index.html#how_it_works">How it works</a></li>
+                <li><a href="index.html#benefits">Benefits</a></li>
+                <li><a href="index.html#footer">Contact</a></li>
+            </ul>
+            <i class="fas fa-bars hamburger_icon" aria-hidden="true"></i>
+        </div>
     </header>
     <img class="form_img" src="./assets/highway.jpg" />
     <div class="head_form">
         <h1>BOOKING FORM</h1>
-        <h3>Fill out the form below and we will contact you <br/> to confirm your departure!</h3>
+        <h3>Fill out the form below and we will contact you <br /> to confirm your departure!</h3>
     </div>
     <form class="main_form" method="POST">
         <div>
@@ -40,7 +43,8 @@
                 <input type="date" name="date" id="trip_date" placeholder="DD.MM.RRRR" />
 
                 <label>Number of Passengers</label>
-                <input type="number" name="passangers_number" placeholder="Number Of Passengers" id="number_of_people" />
+                <input type="number" name="passangers_number" placeholder="Number Of Passengers"
+                    id="number_of_people" />
 
                 <label>First Name</label>
                 <input type="text" name="name" placeholder="Your Name" id="name" />
@@ -56,8 +60,7 @@
                 <input type="text" name="time" placeholder="Pick Up Time" id="start_time" />
 
                 <label>Number of Bags</label>
-                <input type="number" name="baggage_number" placeholder="Number Of Bags"
-                    id="number_of_suitcases" />
+                <input type="number" name="baggage_number" placeholder="Number Of Bags" id="number_of_suitcases" />
 
                 <label>Last Name</label>
                 <input type="text" name="surname" placeholder="Your Surname" id="surname" />
@@ -65,7 +68,8 @@
                 <label>Phone Number</label>
                 <input type="text" name="phone" placeholder="Your Phone Number" id="telephone" />
             </div>
-            <textarea name="info" id="add_info" cols="30" rows="10" placeholder="Additional Information. You may ask about a price or anything You need."></textarea>
+            <textarea name="info" id="add_info" cols="30" rows="10"
+                placeholder="Additional Information. You may ask about a price or anything You need."></textarea>
             <input type="submit" class="submit" value="Book Now" id="submit">
         </div>
 
@@ -75,38 +79,42 @@
         <h3>We will contact you shortly to confirm.</h3>
         <a href="index.html">Home page</a>
     </div>
-    <div class="navbar_footer">
-        <div>
-            <img src="assets/logo2.png">
-            <h3>Oxfordshire</h3>
-            <h3>mobile: 07400 394 206</h3>
-            <h3>email: quidri@gmail.com</h3>
-        </div>
-        <div>
-            <h2>Our services</h2>
-            <h3>Airport transfers</h3>
-            <h3>Private hire</h3>
-            <h3>Weddings/events</h3>
-        </div>
-        <div>
-            <h2>About us</h2>
-            <h3>FAQs</h3>
-            <h3>Pricing</h3>
-            <h3>Contact</h3>
-        </div>
-        <div>
-            <h2>Book now</h2>
-            <h3>Find a ride</h3>
-            <h3>Get a quote</h3>
-            <h3>Ask about hire</h3>
+    <div class="navbar_footer" id="footer">
+        <div class="container">
+            <div>
+                <img src="assets/logo2.png">
+                <h3>Oxfordshire</h3>
+                <h3>mobile: 07400 394 206</h3>
+                <h3>email: quidri@gmail.com</h3>
+            </div>
+            <div>
+                <h2>Our services</h2>
+                <h3>Airport transfers</h3>
+                <h3>Private hire</h3>
+                <h3>Weddings/events</h3>
+            </div>
+            <div>
+                <h2>About us</h2>
+                <h3>FAQs</h3>
+                <h3>Pricing</h3>
+                <h3>Contact</h3>
+            </div>
+            <div>
+                <h2>Book now</h2>
+                <h3>Find a ride</h3>
+                <h3>Get a quote</h3>
+                <h3>Ask about hire</h3>
+            </div>
         </div>
     </div>
     <footer>
-        <h3>birmingham</h3>
-        <h3>Heathrow</h3>
-        <h3>London Luton</h3>
-        <h3>East Midlands</h3>
-        <h3>London Stansted</h3>
+        <div class="container">
+            <h3>birmingham</h3>
+            <h3>Heathrow</h3>
+            <h3>London Luton</h3>
+            <h3>East Midlands</h3>
+            <h3>London Stansted</h3>
+        </div>
     </footer>
 
     <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase.js"></script>
